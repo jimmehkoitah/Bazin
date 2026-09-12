@@ -1,6 +1,6 @@
 # Bazin discovery engine — thesis and plan review
 
-Date: 2026-09-12. Status: review of the founding thesis, data model, ranking rubric, agent list and MVP plan, with due diligence on the claims the plan depends on.
+Date: 2026-09-12. Status: review of the founding thesis, data model, ranking rubric, agent list and MVP plan, with due diligence on the claims the plan depends on. Decisions taken in response are in `decisions.md`; the build that implements them is in `v1-build-spec.md`. Where this review and the decision log disagree (source posture, outreach), the decision log wins.
 
 ## 0. How this review was produced, and its limits
 
