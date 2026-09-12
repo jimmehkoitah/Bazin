@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Bazin Takedown Request</title>
+<meta name="description" content="Claim, correct or remove a vendor listing on this service.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23332e86'/%3E%3Cpath d='M16 7l6 9-6 9-6-9z' fill='%23b8892a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-weave: rgba(51,46,134,0.035);
+    --surface: #ffffff;
+    --surface-2: #f1f1f8;
+    --border: #dfe0ec;
+    --text: #17182b;
+    --text-muted: #5c5e78;
+    --text-faint: #8688a1;
+    --indigo: #332e86;
+    --indigo-strong: #211d5e;
+    --gold: #8a6414;
+    --gold-bright: #b8892a;
+    --gold-tint: #f6ecd6;
+    --caution-text: #7a4b00;
+    --caution-bg: #fbead0;
+    --danger: #9c2b23;
+    --danger-bg: #fbe7e4;
+    --success-text: #1c6b40;
+    --success-bg: #e2f3e8;
+    --focus: #4740c9;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --shadow-1: 0 1px 2px rgba(23,24,43,0.06);
+    --font-display: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101124;
+      --bg-weave: rgba(163,157,255,0.05);
+      --surface: #171833;
+      --surface-2: #1d1f3d;
+      --border: #33345c;
+      --text: #f1f1f8;
+      --text-muted: #b4b6d1;
+      --text-faint: #82849f;
+      --indigo: #a39dff;
+      --indigo-strong: #cac6ff;
+      --gold: #e3c064;
+      --gold-bright: #f0d38b;
+      --gold-tint: #3a3115;
+      --caution-text: #f0cf8e;
+      --caution-bg: #3a2e12;
+      --danger: #f2a29a;
+      --danger-bg: #3d1c19;
+      --success-text: #8fd6ac;
+      --success-bg: #163a26;
+      --focus: #b6b0ff;
+      --shadow-1: 0 1px 2px rgba(0,0,0,0.5);
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    background-image:
+      repeating-linear-gradient(135deg, var(--bg-weave) 0 1px, transparent 1px 15px),
+      repeating-linear-gradient(45deg, var(--bg-weave) 0 1px, transparent 1px 15px);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2 { font-family: var(--font-display); font-weight: 600; margin: 0; }
+  p { margin: 0 0 12px 0; overflow-wrap: anywhere; }
+  a { color: var(--indigo); }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  :focus { outline: none; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+  .page { max-width: 640px; margin: 0 auto; padding: clamp(16px, 4vw, 32px); padding-block: clamp(20px, 4vw, 40px) 48px; }
+  .brand-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--indigo); text-decoration: none; }
+  .brand-mark { color: var(--gold-bright); }
+
+  h1.doc-title { font-size: clamp(1.5rem, 4vw, 2rem); margin-top: 18px; }
+  .doc-sub { color: var(--text-muted); margin-top: 8px; }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    padding: clamp(16px, 4vw, 26px);
+    margin-top: 20px;
+  }
+
+  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .field span.label { font-weight: 600; font-size: 0.92rem; }
+  .field span.hint { color: var(--text-faint); font-size: 0.8rem; }
+  .field input, .field select, .field textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface-2);
+    color: var(--text);
+    width: 100%;
+  }
+  .field textarea { resize: vertical; min-height: 100px; }
+  .required-mark { color: var(--danger); }
+
+  .btn-primary {
+    background: var(--indigo);
+    color: #ffffff;
+    border: 1px solid var(--indigo);
+    border-radius: var(--radius-md);
+    padding: 12px 22px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--indigo-strong); border-color: var(--indigo-strong); }
+  .btn-primary[aria-busy="true"] { opacity: 0.7; cursor: progress; }
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--indigo);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 10px 18px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .btn-secondary:hover { background: var(--surface-2); }
+
+  .form-status {
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+  }
+  .form-status.error { background: var(--danger-bg); color: var(--danger); }
+  .form-status.loading { background: var(--surface-2); color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
+
+  .success-panel {
+    background: var(--success-bg);
+    color: var(--success-text);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    text-align: left;
+  }
+  .success-panel h2 { color: inherit; font-size: 1.2rem; margin-bottom: 8px; }
+  .success-panel p { color: inherit; }
+
+  .spinner {
+    width: 16px; height: 16px; border-radius: 50%;
+    border: 3px solid var(--border); border-top-color: var(--indigo);
+    animation: spin 0.8s linear infinite; flex: none;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+
+  .site-footer {
+    margin-top: 28px;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+  }
+  .site-footer a { color: var(--indigo); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="brand-name" href="/">Bazin<span class="brand-mark">.</span></a>
+    <h1 class="doc-title">Claim or remove a listing</h1>
+    <p class="doc-sub">Use this form if you are the owner of a listed business, or if a listing looks wrong. See the <a href="/privacy">privacy notice</a> for how this service works and how requests are handled.</p>
+  </header>
+
+  <main>
+    <section class="panel" id="form-panel">
+      <div id="form-status" hidden></div>
+
+      <form id="takedown-form" novalidate="novalidate">
+        <div class="field">
+          <label for="requester"><span class="label">Your email <span class="required-mark">*</span></span></label>
+          <input id="requester" name="requester" type="email" required="required" autocomplete="email" placeholder="you@example.com">
+        </div>
+
+        <div class="field">
+          <label for="business_name"><span class="label">Business name</span></label>
+          <input id="business_name" name="business_name" type="text" placeholder="Name as it appears on the listing">
+        </div>
+
+        <div class="field">
+          <label for="source_url"><span class="label">Listing or profile URL <span class="required-mark">*</span></span></label>
+          <span class="hint">The link to the listing on this service, or to the public page it was drawn from.</span>
+          <input id="source_url" name="source_url" type="url" required="required" placeholder="https://instagram.com/example">
+        </div>
+
+        <div class="field">
+          <label for="reason"><span class="label">Reason</span></label>
+          <select id="reason" name="reason">
+            <option value="">Choose a reason&#8230;</option>
+            <option value="I am the owner and want the listing removed">I am the owner and want the listing removed</option>
+            <option value="I am the owner and want to correct or claim the listing">I am the owner and want to correct or claim the listing</option>
+            <option value="This listing is not a Bazin vendor">This listing is not a Bazin vendor</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="details"><span class="label">Details</span></label>
+          <textarea id="details" name="details" maxlength="2000" placeholder="Anything that helps us act on this quickly: what should change, or why the listing is wrong."></textarea>
+        </div>
+
+        <button id="submit-btn" type="submit" class="btn-primary">Send request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="/">Back to search</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  function qs(id) { return document.getElementById(id); }
+
+  var form = qs("takedown-form");
+  var panel = qs("form-panel");
+  var statusEl = qs("form-status");
+  var submitBtn = qs("submit-btn");
+
+  function showStatus(kind, text) {
+    statusEl.hidden = false;
+    statusEl.className = "form-status " + kind;
+    statusEl.replaceChildren();
+    if (kind === "loading") {
+      var spinner = document.createElement("span");
+      spinner.className = "spinner";
+      spinner.setAttribute("aria-hidden", "true");
+      statusEl.appendChild(spinner);
+    }
+    var p = document.createElement("p");
+    p.style.margin = "0";
+    p.textContent = text;
+    statusEl.appendChild(p);
+  }
+
+  function clearStatus() {
+    statusEl.hidden = true;
+    statusEl.replaceChildren();
+  }
+
+  function showSuccess() {
+    panel.replaceChildren();
+    var wrap = document.createElement("div");
+    wrap.className = "success-panel";
+    wrap.setAttribute("role", "status");
+    var h2 = document.createElement("h2");
+    h2.textContent = "Request received";
+    var p = document.createElement("p");
+    p.textContent = "Received. We act on removal requests within 30 days and usually much faster.";
+    var again = document.createElement("button");
+    again.type = "button";
+    again.className = "btn-secondary";
+    again.textContent = "Submit another request";
+    again.addEventListener("click", function () { window.location.reload(); });
+    wrap.appendChild(h2);
+    wrap.appendChild(p);
+    wrap.appendChild(again);
+    panel.appendChild(wrap);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    clearStatus();
+
+    var payload = {
+      requester: qs("requester").value.trim(),
+      business_name: qs("business_name").value.trim(),
+      source_url: qs("source_url").value.trim(),
+      reason: qs("reason").value,
+      details: qs("details").value.trim()
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.setAttribute("aria-busy", "true");
+    showStatus("loading", "Sending your request…");
+
+    fetch("/takedown", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Server returned " + res.status + ".");
+        return true;
+      })
+      .then(function () {
+        showSuccess();
+      })
+      .catch(function (err) {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute("aria-busy");
+        showStatus("error", "This did not go through: " + (err && err.message ? err.message : "network error") + " Please try again, or email the address in the privacy notice.");
+      });
+  });
+})();
+</script>
+</body>
+</html>

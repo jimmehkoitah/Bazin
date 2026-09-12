@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Bazin Privacy Notice</title>
+<meta name="description" content="What this service collects from public sources, why, and how to request correction or removal of a listing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23332e86'/%3E%3Cpath d='M16 7l6 9-6 9-6-9z' fill='%23b8892a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-weave: rgba(51,46,134,0.035);
+    --surface: #ffffff;
+    --surface-2: #f1f1f8;
+    --border: #dfe0ec;
+    --text: #17182b;
+    --text-muted: #5c5e78;
+    --text-faint: #8688a1;
+    --indigo: #332e86;
+    --indigo-strong: #211d5e;
+    --indigo-tint: #edebfb;
+    --gold: #8a6414;
+    --gold-bright: #b8892a;
+    --gold-tint: #f6ecd6;
+    --caution-text: #7a4b00;
+    --caution-bg: #fbead0;
+    --focus: #4740c9;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --shadow-1: 0 1px 2px rgba(23,24,43,0.06);
+    --font-display: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101124;
+      --bg-weave: rgba(163,157,255,0.05);
+      --surface: #171833;
+      --surface-2: #1d1f3d;
+      --border: #33345c;
+      --text: #f1f1f8;
+      --text-muted: #b4b6d1;
+      --text-faint: #82849f;
+      --indigo: #a39dff;
+      --indigo-strong: #cac6ff;
+      --indigo-tint: #262357;
+      --gold: #e3c064;
+      --gold-bright: #f0d38b;
+      --gold-tint: #3a3115;
+      --caution-text: #f0cf8e;
+      --caution-bg: #3a2e12;
+      --focus: #b6b0ff;
+      --shadow-1: 0 1px 2px rgba(0,0,0,0.5);
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    background-image:
+      repeating-linear-gradient(135deg, var(--bg-weave) 0 1px, transparent 1px 15px),
+      repeating-linear-gradient(45deg, var(--bg-weave) 0 1px, transparent 1px 15px);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2 { font-family: var(--font-display); font-weight: 600; margin: 0; }
+  p { margin: 0 0 12px 0; overflow-wrap: anywhere; }
+  a { color: var(--indigo); }
+  ul { margin: 0 0 12px 0; padding-left: 1.2em; }
+  li { margin-bottom: 6px; }
+  :focus { outline: none; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+  .page { max-width: 760px; margin: 0 auto; padding: clamp(16px, 4vw, 32px); padding-block: clamp(20px, 4vw, 40px) 48px; }
+  .brand-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--indigo); text-decoration: none; }
+  .brand-mark { color: var(--gold-bright); }
+
+  .draft-note {
+    display: inline-block;
+    margin-top: 14px;
+    background: var(--caution-bg);
+    color: var(--caution-text);
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  h1.doc-title { font-size: clamp(1.6rem, 4vw, 2.1rem); margin-top: 18px; }
+  .doc-sub { color: var(--text-muted); margin-top: 8px; }
+
+  section.doc-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    padding: clamp(16px, 3vw, 24px);
+    margin-top: 18px;
+  }
+  section.doc-section h2 { font-size: 1.15rem; color: var(--indigo); margin-bottom: 10px; }
+  .email-placeholder {
+    background: var(--surface-2);
+    border-radius: var(--radius-sm);
+    padding: 2px 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+  }
+
+  .site-footer {
+    margin-top: 32px;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+  }
+  .site-footer a { color: var(--indigo); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="brand-name" href="/">Bazin<span class="brand-mark">.</span></a>
+    <div><span class="draft-note">Draft, pending legal review</span></div>
+    <h1 class="doc-title">Privacy notice</h1>
+    <p class="doc-sub">This notice explains what this service is, what it collects from public sources, and how to correct or remove a listing.</p>
+  </header>
+
+  <main>
+    <section class="doc-section" aria-labelledby="h-what">
+      <h2 id="h-what">What this service is</h2>
+      <p>This service is a discovery index of vendors who make, sell, embroider or supply bazin fabric and related West African formalwear. It is compiled from information that businesses and their representatives have already made publicly available online, and every listing links back to the original public page it was drawn from. This service does not sell products or process payments; it helps buyers find vendors and directs them to the vendor's own public presence.</p>
+    </section>
+
+    <section class="doc-section" aria-labelledby="h-collect">
+      <h2 id="h-collect">What we collect</h2>
+      <p>For each listed vendor, this service may hold:</p>
+      <ul>
+        <li>Business name and category</li>
+        <li>Public profile handles and links (for example, an Instagram, TikTok or Facebook profile, a website, or a marketplace shop page)</li>
+        <li>Short excerpts of public captions and hashtags associated with the vendor's own posts</li>
+        <li>Thumbnail images hotlinked directly from the original source, never downloaded or re-hosted</li>
+        <li>Public contact channels the business has itself published, such as a WhatsApp number, phone number or email address</li>
+        <li>Prices and locations the business has stated publicly</li>
+        <li>Ratings and review counts drawn from public review sites</li>
+      </ul>
+    </section>
+
+    <section class="doc-section" aria-labelledby="h-why">
+      <h2 id="h-why">Why</h2>
+      <p>This service processes this information on the basis of a legitimate interest in helping buyers find vendors of bazin fabric and West African formalwear, under Article 6(1)(f) of the GDPR. That interest is weighed against the rights of the businesses listed: only information the business has already made public is collected, only a short excerpt rather than full content is kept, and any business can object to being listed at any time, as described under "Your rights" below.</p>
+    </section>
+
+    <section class="doc-section" aria-labelledby="h-sources">
+      <h2 id="h-sources">Sources</h2>
+      <p>Listings are compiled from sources such as:</p>
+      <ul>
+        <li>Public social media profiles and posts</li>
+        <li>Online marketplaces and storefronts</li>
+        <li>Public classifieds</li>
+        <li>Open map data</li>
+        <li>Vendor websites</li>
+      </ul>
+    </section>
+
+    <section class="doc-section" aria-labelledby="h-rights">
+      <h2 id="h-rights">Your rights</h2>
+      <p>If you are a business listed on this service, or you represent one, you have the right to access what is held about that listing, to correct inaccurate information, to object to the listing, and to have it removed entirely, at any time and free of charge. Submit a request through the <a href="/takedown">takedown form</a>, or write to <span class="email-placeholder">privacy@[domain]</span>. Valid requests are acted on within 30 days, usually much sooner.</p>
+    </section>
+
+    <section class="doc-section" aria-labelledby="h-retention">
+      <h2 id="h-retention">Retention</h2>
+      <p>Excerpts and derived tags are kept for as long as the listing stays live and useful to buyers. Once a listing is removed, whether by a valid request or because the underlying source has gone away, the associated excerpts and derived tags are deleted within 30 days.</p>
+    </section>
+
+    <section class="doc-section" aria-labelledby="h-not">
+      <h2 id="h-not">What we do not do</h2>
+      <ul>
+        <li>We do not download or re-host photos or videos; thumbnails are hotlinked from the original source and served through it.</li>
+        <li>We do not sell contact lists or personal data to anyone.</li>
+        <li>We do not send unsolicited messages to the businesses listed here.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section" aria-labelledby="h-claim">
+      <h2 id="h-claim">Claim your listing</h2>
+      <p>If you run one of the businesses listed here, you can claim it to correct details, add information buyers are asking for, or have it removed. Use the <a href="/takedown">takedown form</a> and choose the option that matches what you need; claims are typically reviewed within a few days.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="/takedown">Claim or remove a listing</a>
+  </footer>
+</div>
+</body>
+</html>
