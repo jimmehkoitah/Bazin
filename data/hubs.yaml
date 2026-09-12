@@ -1,0 +1,229 @@
+# Hub cities for discovery. priority 1 = sprint 1; 2 = next; 3 = later.
+# lat/lon are city centres; areas are neighbourhoods and markets used in queries.
+hubs:
+  - id: dakar
+    city: Dakar
+    country: SN
+    lat: 14.6928
+    lon: -17.4467
+    languages: [fr, wo]
+    priority: 1
+    areas: [HLM, Sandaga, Plateau, Parcelles, Pikine, "Sea Plaza"]
+  - id: bamako
+    city: Bamako
+    country: ML
+    lat: 12.6392
+    lon: -8.0029
+    languages: [fr, bm]
+    priority: 1
+    areas: ["ACI 2000", "Grand Marché", Hamdallaye, Badalabougou]
+  - id: paris
+    city: Paris
+    country: FR
+    lat: 48.8566
+    lon: 2.3522
+    languages: [fr]
+    priority: 1
+    areas: ["Château Rouge", "Goutte d'Or", Barbès, "La Courneuve", "Saint-Denis"]
+  - id: new_york
+    city: New York
+    country: US
+    lat: 40.7128
+    lon: -74.0060
+    languages: [en, fr]
+    priority: 1
+    areas: [Harlem, "116th Street", Bronx, Brooklyn]
+  - id: lagos
+    city: Lagos
+    country: NG
+    lat: 6.5244
+    lon: 3.3792
+    languages: [en, yo]
+    priority: 1
+    areas: [Balogun, "Lagos Island", Ikeja, Lekki]
+  - id: kano
+    city: Kano
+    country: NG
+    lat: 12.0022
+    lon: 8.5920
+    languages: [en, ha]
+    priority: 2
+    areas: ["Kantin Kwari"]
+  - id: abidjan
+    city: Abidjan
+    country: CI
+    lat: 5.3600
+    lon: -4.0083
+    languages: [fr]
+    priority: 2
+    areas: [Adjamé, Treichville, Cocody]
+  - id: cotonou
+    city: Cotonou
+    country: BJ
+    lat: 6.3703
+    lon: 2.3912
+    languages: [fr]
+    priority: 2
+    areas: [Dantokpa]
+  - id: lome
+    city: Lomé
+    country: TG
+    lat: 6.1319
+    lon: 1.2228
+    languages: [fr]
+    priority: 2
+    areas: ["Grand Marché"]
+  - id: conakry
+    city: Conakry
+    country: GN
+    lat: 9.6412
+    lon: -13.5784
+    languages: [fr]
+    priority: 2
+    areas: [Madina]
+  - id: banjul
+    city: Banjul
+    country: GM
+    lat: 13.4549
+    lon: -16.5790
+    languages: [en, wo]
+    priority: 2
+    areas: [Serrekunda, Brikama]
+  - id: london
+    city: London
+    country: GB
+    lat: 51.5074
+    lon: -0.1278
+    languages: [en]
+    priority: 2
+    areas: [Peckham, Brixton, Hackney]
+  - id: milan
+    city: Milan
+    country: IT
+    lat: 45.4642
+    lon: 9.1900
+    languages: [it, fr]
+    priority: 2
+    areas: []
+  - id: bergamo
+    city: Bergamo
+    country: IT
+    lat: 45.6983
+    lon: 9.6773
+    languages: [it, fr]
+    priority: 2
+    areas: [Zingonia]
+  - id: brescia
+    city: Brescia
+    country: IT
+    lat: 45.5416
+    lon: 10.2118
+    languages: [it, fr]
+    priority: 2
+    areas: []
+  - id: lyon
+    city: Lyon
+    country: FR
+    lat: 45.7640
+    lon: 4.8357
+    languages: [fr]
+    priority: 3
+    areas: []
+  - id: marseille
+    city: Marseille
+    country: FR
+    lat: 43.2965
+    lon: 5.3698
+    languages: [fr]
+    priority: 3
+    areas: []
+  - id: brussels
+    city: Brussels
+    country: BE
+    lat: 50.8503
+    lon: 4.3517
+    languages: [fr]
+    priority: 3
+    areas: [Matonge]
+  - id: amsterdam
+    city: Amsterdam
+    country: NL
+    lat: 52.3676
+    lon: 4.9041
+    languages: [en, fr]
+    priority: 3
+    areas: []
+  - id: barcelona
+    city: Barcelona
+    country: ES
+    lat: 41.3874
+    lon: 2.1686
+    languages: [es, fr]
+    priority: 3
+    areas: []
+  - id: ouagadougou
+    city: Ouagadougou
+    country: BF
+    lat: 12.3714
+    lon: -1.5197
+    languages: [fr]
+    priority: 3
+    areas: []
+  - id: niamey
+    city: Niamey
+    country: NE
+    lat: 13.5116
+    lon: 2.1254
+    languages: [fr]
+    priority: 3
+    areas: []
+  - id: nouakchott
+    city: Nouakchott
+    country: MR
+    lat: 18.0735
+    lon: -15.9582
+    languages: [fr, ar]
+    priority: 3
+    areas: []
+  - id: philadelphia
+    city: Philadelphia
+    country: US
+    lat: 39.9526
+    lon: -75.1652
+    languages: [en, fr]
+    priority: 3
+    areas: []
+  - id: atlanta
+    city: Atlanta
+    country: US
+    lat: 33.7490
+    lon: -84.3880
+    languages: [en, fr]
+    priority: 3
+    areas: []
+  - id: houston
+    city: Houston
+    country: US
+    lat: 29.7604
+    lon: -95.3698
+    languages: [en, fr]
+    priority: 3
+    areas: []
+  - id: washington
+    city: Washington
+    country: US
+    lat: 38.9072
+    lon: -77.0369
+    languages: [en, fr]
+    priority: 3
+    areas: []
+
+# Known first-party shops with product feeds (Shopify-style JSON or sitemaps).
+shopify_stores:
+  - {domain: mamagetzner.com, name: "Mama Getzner", country: FR}
+  - {domain: empiretextiles.com, name: "Empire Textiles", country: GB}
+  - {domain: jansenholland.com, name: "Jansen Holland", country: NL}
+  - {domain: majesticlondon.com, name: "Majestic London", country: GB}
+  - {domain: dimancheabamako.com, name: "Dimanche à Bamako", country: ML}
+  - {domain: monbazin.com, name: "Mon Bazin", country: ML}
+  - {domain: senegalmarket.it, name: "Senegal Market", country: IT}

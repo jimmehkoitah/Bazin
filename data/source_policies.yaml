@@ -1,0 +1,24 @@
+# One row per (platform, acquisition method). retention_days null = indefinite.
+# terms_status reflects the platform's terms as researched on 2026-09-12; D2 accepts off-terms sources.
+policies:
+  - {platform: instagram,   method: third_party_scraper, terms_status: off_terms, retention_days: null, store_media: false, notes: "Apify instagram-scraper; excerpts and URLs only"}
+  - {platform: tiktok,      method: third_party_scraper, terms_status: off_terms, retention_days: null, store_media: false, notes: "Apify tiktok-scraper; excerpts and URLs only"}
+  - {platform: facebook,    method: third_party_scraper, terms_status: off_terms, retention_days: null, store_media: false, notes: "Apify facebook pages scraper; public pages only"}
+  - {platform: google_maps, method: third_party_scraper, terms_status: off_terms, retention_days: null, store_media: false, notes: "Apify google-maps-scraper for discovery of physical shops"}
+  - {platform: google_maps, method: official_api,        terms_status: compliant, retention_days: 0,    store_media: false, notes: "Places API: store place_id only"}
+  - {platform: pinterest,   method: third_party_scraper, terms_status: off_terms, retention_days: null, store_media: false, notes: "pin metadata and source links only"}
+  - {platform: youtube,     method: official_api,        terms_status: compliant, retention_days: 30,   store_media: false, notes: "YouTube Data API; statistics refreshed within 30 days"}
+  - {platform: etsy,        method: official_api,        terms_status: compliant, retention_days: 1,    store_media: false, notes: "Etsy Open API; listing content refreshed within 6 hours when displayed; own derived tags kept"}
+  - {platform: yelp,        method: official_api,        terms_status: compliant, retention_days: 1,    store_media: false, notes: "Yelp Fusion; display rules apply"}
+  - {platform: afrikrea,    method: first_party_crawl,   terms_status: grey,      retention_days: null, store_media: false, notes: "category and seller pages; excerpts only"}
+  - {platform: coinafrique, method: first_party_crawl,   terms_status: grey,      retention_days: null, store_media: false, notes: "public listing pages; terms not yet checked"}
+  - {platform: expat_dakar, method: first_party_crawl,   terms_status: grey,      retention_days: null, store_media: false, notes: "public listing pages; terms not yet checked"}
+  - {platform: jiji,        method: first_party_crawl,   terms_status: grey,      retention_days: null, store_media: false, notes: "public listing pages; terms not yet checked"}
+  - {platform: shopify,     method: feed,                terms_status: compliant, retention_days: null, store_media: false, notes: "first-party products.json; robots.txt honoured"}
+  - {platform: website,     method: first_party_crawl,   terms_status: compliant, retention_days: null, store_media: false, notes: "seller websites; robots.txt honoured"}
+  - {platform: overture,    method: open_data,           terms_status: compliant, retention_days: null, store_media: false, notes: "CDLA-Permissive-2.0 with attribution"}
+  - {platform: osm,         method: open_data,           terms_status: compliant, retention_days: null, store_media: false, notes: "ODbL with attribution; share-alike to be analysed before publishing derived data"}
+  - {platform: web,         method: serp,                terms_status: grey,      retention_days: null, store_media: false, notes: "Brave Search / Google Programmable Search: URL and snippet only"}
+  - {platform: other,       method: manual,              terms_status: compliant, retention_days: null, store_media: false, notes: "human-entered records"}
+  - {platform: other,       method: vendor_submitted,    terms_status: compliant, retention_days: null, store_media: true,  notes: "vendor-supplied content with consent"}
+  - {platform: other,       method: claimed,             terms_status: compliant, retention_days: null, store_media: true,  notes: "claimed profile updates"}

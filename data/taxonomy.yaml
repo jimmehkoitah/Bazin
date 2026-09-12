@@ -1,0 +1,735 @@
+# Taxonomy v0 (machine-readable form of docs/taxonomy-seed.md).
+# language codes: fr, en, wo (Wolof), ha (Hausa), yo (Yoruba), bm (Bambara), it, es, ar, any, misspelling.
+# market: SN, ML, NG, GN, GM, CI, BJ, TG, BF, NE, MR, FR, US, GB, IT, NL, diaspora, or omitted for any.
+# Native-speaker review pending (see docs/taxonomy-seed.md "Known gaps").
+concepts:
+
+  # ---------------- fabric ----------------
+  - id: fabric.bazin
+    kind: fabric
+    label: Bazin
+    notes: Cotton damask; the category root.
+    labels:
+      - {label: bazin, lang: any}
+      - {label: basin, lang: misspelling}
+      - {label: bazin damassé, lang: fr}
+      - {label: brocade, lang: en}
+      - {label: brocart, lang: fr}
+      - {label: brocard, lang: misspelling}
+      - {label: damask, lang: en}
+      - {label: damassé, lang: fr}
+      - {label: tissu bazin, lang: fr}
+      - {label: bazin fabric, lang: en}
+
+  - id: fabric.bazin.riche
+    kind: fabric
+    parent: fabric.bazin
+    label: Bazin riche
+    labels:
+      - {label: bazin riche, lang: any}
+      - {label: rich bazin, lang: en}
+      - {label: bazin rich, lang: misspelling}
+      - {label: basin riche, lang: misspelling}
+      - {label: super riche, lang: fr}
+      - {label: bazin super riche, lang: fr}
+
+  - id: fabric.bazin.guinea_brocade
+    kind: fabric
+    parent: fabric.bazin
+    label: Guinea brocade / shadda
+    notes: Nigerian retail names for the same fabric family.
+    labels:
+      - {label: guinea brocade, lang: en, market: NG}
+      - {label: guinea cloth, lang: en, market: NG}
+      - {label: shadda, lang: en, market: NG}
+      - {label: shedda, lang: en, market: NG}
+      - {label: supreme bazin shadda, lang: en, market: NG}
+      - {label: shadda fabric, lang: en, market: NG}
+
+  - id: fabric.getzner
+    kind: fabric
+    parent: fabric.bazin.riche
+    label: Getzner
+    notes: Austrian brand, also used as a generic noun in Francophone markets.
+    labels:
+      - {label: getzner, lang: any}
+      - {label: djezner, lang: wo}
+      - {label: bazin getzner, lang: fr}
+      - {label: getzner bazin, lang: en}
+      - {label: getzner brodé, lang: fr}
+      - {label: original getzner, lang: any}
+      - {label: getzner original, lang: any}
+      - {label: getzner authentique, lang: fr}
+      - {label: bazin riche getzner, lang: fr}
+
+  - id: fabric.getzner.super_magnum
+    kind: fabric
+    parent: fabric.getzner
+    label: Super Magnum
+    labels:
+      - {label: super magnum, lang: any}
+      - {label: super magnum gold, lang: any}
+      - {label: super magnum gold xl, lang: any}
+      - {label: magnum getzner, lang: any}
+  - id: fabric.getzner.madame
+    kind: fabric
+    parent: fabric.getzner
+    label: Madame Getzner
+    labels:
+      - {label: madame getzner, lang: any}
+  - id: fabric.getzner.phantom
+    kind: fabric
+    parent: fabric.getzner
+    label: Phantom
+    labels:
+      - {label: phantom xl, lang: any}
+      - {label: phantom getzner, lang: any}
+      - {label: getzner phantom, lang: any}
+  - id: fabric.getzner.wagambari
+    kind: fabric
+    parent: fabric.getzner
+    label: Super Wagambari
+    labels:
+      - {label: wagambari, lang: any}
+      - {label: super wagambari gold, lang: any}
+  - id: fabric.getzner.empire
+    kind: fabric
+    parent: fabric.getzner
+    label: Empire Getzner
+    labels:
+      - {label: empire getzner, lang: any}
+      - {label: getzner empire, lang: any}
+  - id: fabric.getzner.wifi
+    kind: fabric
+    parent: fabric.getzner
+    label: Wifi Brocade
+    labels:
+      - {label: wifi brocade, lang: any}
+      - {label: getzner wifi, lang: any}
+  - id: fabric.getzner.getzner8
+    kind: fabric
+    parent: fabric.getzner
+    label: Getzner 8
+    notes: Mali reseller usage; medium confidence.
+    labels:
+      - {label: getzner 8, lang: fr, market: ML}
+  - id: fabric.getzner.empereur
+    kind: fabric
+    parent: fabric.getzner
+    label: Empereur
+    notes: Mali reseller usage; medium confidence.
+    labels:
+      - {label: empereur getzner, lang: fr, market: ML}
+      - {label: getzner empereur, lang: fr, market: ML}
+  - id: fabric.getzner.atiku_voile
+    kind: fabric
+    parent: fabric.getzner
+    label: Atiku Swiss Voile
+    labels:
+      - {label: atiku swiss voile, lang: en, market: NG}
+      - {label: getzner atiku, lang: en, market: NG}
+
+  - id: fabric.bazin.imitation
+    kind: fabric
+    parent: fabric.bazin
+    label: Imitation bazin
+    notes: Signals of non-original or lower grade fabric.
+    labels:
+      - {label: bazin moins riche, lang: fr}
+      - {label: bazin chinois, lang: fr}
+      - {label: chinese bazin, lang: en}
+      - {label: bazin ordinaire, lang: fr}
+      - {label: austrian quality, lang: en}
+
+  - id: fabric.bazin.other_brands
+    kind: fabric
+    parent: fabric.bazin
+    label: Other bazin brands
+    labels:
+      - {label: bauer fulda, lang: any}
+      - {label: drews, lang: any}
+      - {label: ganila, lang: any}
+      - {label: suprême textile, lang: fr}
+      - {label: supreme textile, lang: en}
+
+  - id: fabric.atiku
+    kind: fabric
+    label: Atiku
+    notes: Sibling category, not bazin; plain or striped cotton for kaftans (Nigeria).
+    labels:
+      - {label: atiku, lang: en, market: NG}
+      - {label: atiku fabric, lang: en, market: NG}
+      - {label: cotton polish, lang: en, market: NG}
+
+  - id: fabric.out_of_scope
+    kind: fabric
+    label: Other African fabrics (out of scope v1)
+    labels:
+      - {label: wax, lang: any}
+      - {label: ankara, lang: any}
+      - {label: pagne, lang: fr}
+      - {label: bogolan, lang: any}
+      - {label: lace, lang: en}
+      - {label: dentelle, lang: fr}
+      - {label: aso oke, lang: en}
+      - {label: kente, lang: any}
+      - {label: adire, lang: any}
+
+  # ---------------- garment ----------------
+  - id: garment.boubou
+    kind: garment
+    label: Boubou
+    labels:
+      - {label: boubou, lang: any}
+      - {label: bubu, lang: misspelling}
+      - {label: mbubb, lang: wo}
+      - {label: tenue bazin, lang: fr}
+      - {label: tenue en bazin, lang: fr}
+      - {label: bazin outfit, lang: en}
+
+  - id: garment.grand_boubou
+    kind: garment
+    parent: garment.boubou
+    label: Grand boubou
+    labels:
+      - {label: grand boubou, lang: any}
+      - {label: grand boubou 3 pièces, lang: fr}
+      - {label: grand boubou brodé, lang: fr}
+      - {label: boubou brodé, lang: fr}
+      - {label: 3 pièces, lang: fr}
+      - {label: trois pièces, lang: fr}
+      - {label: gandoura, lang: fr}
+      - {label: grand bubu, lang: misspelling}
+
+  - id: garment.kaftan
+    kind: garment
+    label: Kaftan
+    labels:
+      - {label: kaftan, lang: any}
+      - {label: caftan, lang: fr}
+      - {label: xaftaan, lang: wo}
+      - {label: kaftan moussa, lang: fr, market: SN}
+      - {label: kaftan bazin, lang: any}
+
+  - id: garment.taille_basse
+    kind: garment
+    label: Taille basse
+    labels:
+      - {label: taille basse, lang: fr}
+      - {label: model taille basse, lang: fr}
+      - {label: modèle taille basse, lang: fr}
+
+  - id: garment.ndoket
+    kind: garment
+    label: Ndoket
+    labels:
+      - {label: ndoket, lang: wo}
+      - {label: ndokette, lang: wo}
+      - {label: boubou à la française, lang: fr}
+
+  - id: garment.babban_riga
+    kind: garment
+    label: Babban riga
+    labels:
+      - {label: babban riga, lang: ha, market: NG}
+      - {label: babbar riga, lang: ha, market: NG}
+
+  - id: garment.agbada
+    kind: garment
+    label: Agbada
+    labels:
+      - {label: agbada, lang: any, market: NG}
+      - {label: buba and sokoto, lang: en, market: NG}
+      - {label: 3 pieces agbada, lang: en, market: NG}
+      - {label: agbada set, lang: en, market: NG}
+
+  - id: garment.senator
+    kind: garment
+    label: Senator
+    labels:
+      - {label: senator, lang: en, market: NG}
+      - {label: senator style, lang: en, market: NG}
+      - {label: senator wear, lang: en, market: NG}
+
+  - id: garment.jalabiya
+    kind: garment
+    label: Jalabiya
+    labels:
+      - {label: jalabiya, lang: any}
+      - {label: jalabia, lang: misspelling}
+      - {label: jellabiya, lang: misspelling}
+
+  - id: garment.draa
+    kind: garment
+    label: Drâa
+    labels:
+      - {label: drâa, lang: fr, market: MR}
+      - {label: draa, lang: misspelling}
+      - {label: boubou mauritanien, lang: fr}
+
+  - id: garment.bridal
+    kind: garment
+    label: Bridal bazin outfit
+    labels:
+      - {label: tenue de mariée, lang: fr}
+      - {label: robe de mariée bazin, lang: fr}
+      - {label: tenue mariage, lang: fr}
+      - {label: bridal bazin, lang: en}
+      - {label: wedding bazin, lang: en}
+      - {label: bazin wedding outfit, lang: en}
+
+  - id: garment.dress
+    kind: garment
+    label: Bazin dress
+    labels:
+      - {label: robe bazin, lang: fr}
+      - {label: robe en bazin, lang: fr}
+      - {label: bazin dress, lang: en}
+      - {label: bazin gown, lang: en}
+
+  - id: garment.womens
+    kind: garment
+    label: Women's bazin outfit
+    labels:
+      - {label: bazin femme, lang: fr}
+      - {label: women bazin, lang: en}
+      - {label: bazin riche femme, lang: fr}
+      - {label: women's bazin, lang: en}
+
+  - id: garment.mens
+    kind: garment
+    label: Men's bazin outfit
+    labels:
+      - {label: bazin homme, lang: fr}
+      - {label: ensemble homme, lang: fr}
+      - {label: men bazin, lang: en}
+      - {label: men's bazin, lang: en}
+      - {label: costume bazin, lang: fr}
+      - {label: chemise bazin, lang: fr}
+
+  - id: garment.children
+    kind: garment
+    label: Children's bazin outfit
+    labels:
+      - {label: ensemble enfant, lang: fr}
+      - {label: bazin enfant, lang: fr}
+      - {label: kids bazin, lang: en}
+      - {label: bazin kids, lang: en}
+
+  - id: garment.couple
+    kind: garment
+    label: Couple set
+    labels:
+      - {label: ensemble couple, lang: fr}
+      - {label: couple bazin, lang: en}
+      - {label: tenue couple, lang: fr}
+
+  # ---------------- technique ----------------
+  - id: technique.embroidery
+    kind: technique
+    label: Embroidery
+    labels:
+      - {label: broderie, lang: fr}
+      - {label: brodé, lang: fr}
+      - {label: brodée, lang: fr}
+      - {label: broderie machine, lang: fr}
+      - {label: broderie main, lang: fr}
+      - {label: embroidery, lang: en}
+      - {label: embroidered, lang: en}
+      - {label: bazin brodé, lang: fr}
+
+  - id: technique.dyeing
+    kind: technique
+    label: Dyeing (thioup)
+    labels:
+      - {label: thioup, lang: wo}
+      - {label: thioub, lang: wo}
+      - {label: cuub, lang: wo}
+      - {label: teinture, lang: fr}
+      - {label: bazin teint, lang: fr}
+      - {label: teinture artisanale, lang: fr}
+      - {label: teinture de bamako, lang: fr, market: ML}
+      - {label: gala, lang: bm, market: ML}
+      - {label: tie-dye bazin, lang: en}
+      - {label: getzner teinté, lang: fr}
+
+  - id: technique.tailoring
+    kind: technique
+    label: Tailoring
+    labels:
+      - {label: couture, lang: fr}
+      - {label: sur mesure, lang: fr}
+      - {label: made to measure, lang: en}
+      - {label: bespoke, lang: en}
+      - {label: prêt-à-porter, lang: fr}
+      - {label: prêt à porter, lang: fr}
+      - {label: pret a porter, lang: misspelling}
+      - {label: tailleur, lang: fr}
+      - {label: couturier, lang: fr}
+      - {label: couturière, lang: fr}
+      - {label: atelier, lang: fr}
+      - {label: tailor, lang: en}
+      - {label: seamstress, lang: en}
+      - {label: styliste, lang: fr}
+      - {label: modéliste, lang: fr}
+      - {label: fashion designer, lang: en}
+
+  - id: technique.beading
+    kind: technique
+    label: Beading and stones
+    labels:
+      - {label: perlage, lang: fr}
+      - {label: perles, lang: fr}
+      - {label: strass, lang: fr}
+      - {label: beading, lang: en}
+      - {label: beaded, lang: en}
+      - {label: stones, lang: en}
+
+  # ---------------- occasion ----------------
+  - id: occasion.tabaski
+    kind: occasion
+    label: Tabaski (Eid al-Adha)
+    labels:
+      - {label: tabaski, lang: any}
+      - {label: tobaski, lang: en, market: GM}
+      - {label: eid al-adha, lang: en}
+      - {label: eid al adha, lang: en}
+      - {label: aïd el-kébir, lang: fr}
+      - {label: aid el kebir, lang: fr}
+      - {label: big sallah, lang: en, market: NG}
+      - {label: tenue tabaski, lang: fr}
+      - {label: modèle tabaski, lang: fr}
+      - {label: collection tabaski, lang: fr}
+      - {label: eid, lang: any}
+
+  - id: occasion.korite
+    kind: occasion
+    label: Korité (Eid al-Fitr)
+    labels:
+      - {label: korité, lang: fr}
+      - {label: korite, lang: misspelling}
+      - {label: eid al-fitr, lang: en}
+      - {label: eid al fitr, lang: en}
+      - {label: aïd el-fitr, lang: fr}
+      - {label: small sallah, lang: en, market: NG}
+      - {label: mode korité, lang: fr}
+
+  - id: occasion.gamou
+    kind: occasion
+    label: Gamou (Mawlid)
+    labels:
+      - {label: gamou, lang: any}
+      - {label: maouloud, lang: fr}
+      - {label: mawlid, lang: en}
+      - {label: tivaouane, lang: any, market: SN}
+
+  - id: occasion.magal
+    kind: occasion
+    label: Grand Magal de Touba
+    labels:
+      - {label: magal, lang: any, market: SN}
+      - {label: grand magal, lang: any, market: SN}
+      - {label: touba, lang: any, market: SN}
+
+  - id: occasion.wedding
+    kind: occasion
+    label: Wedding
+    labels:
+      - {label: mariage, lang: fr}
+      - {label: wedding, lang: en}
+      - {label: mariage sénégalais, lang: fr}
+      - {label: senegalese wedding, lang: en}
+      - {label: malian wedding, lang: en}
+      - {label: mariée, lang: fr}
+      - {label: bride, lang: en}
+      - {label: mariage traditionnel, lang: fr}
+      - {label: owambe, lang: yo, market: NG}
+      - {label: aso ebi, lang: yo, market: NG}
+
+  - id: occasion.naming
+    kind: occasion
+    label: Naming ceremony
+    labels:
+      - {label: baptême, lang: fr}
+      - {label: bapteme, lang: misspelling}
+      - {label: ngente, lang: wo}
+      - {label: naming ceremony, lang: en}
+
+  - id: occasion.christmas
+    kind: occasion
+    label: Christmas and New Year
+    labels:
+      - {label: noël, lang: fr}
+      - {label: noel, lang: misspelling}
+      - {label: fêtes de fin d'année, lang: fr}
+      - {label: christmas, lang: en}
+      - {label: new year, lang: en}
+
+  - id: occasion.sallah
+    kind: occasion
+    label: Sallah
+    labels:
+      - {label: sallah, lang: en, market: NG}
+      - {label: sallah outfit, lang: en, market: NG}
+
+  - id: occasion.ceremony
+    kind: occasion
+    label: Ceremony / formal
+    labels:
+      - {label: cérémonie, lang: fr}
+      - {label: tenue de fête, lang: fr}
+      - {label: soirée, lang: fr}
+      - {label: gala, lang: fr}
+      - {label: tenue de cérémonie, lang: fr}
+      - {label: formal wear, lang: en}
+
+  # ---------------- style ----------------
+  - id: style.luxury
+    kind: style
+    label: Luxury
+    labels:
+      - {label: luxe, lang: fr}
+      - {label: luxury, lang: en}
+      - {label: haute couture, lang: any}
+      - {label: prestige, lang: any}
+      - {label: vip, lang: any}
+  - id: style.classic
+    kind: style
+    label: Classic / traditional
+    labels:
+      - {label: classique, lang: fr}
+      - {label: traditionnel, lang: fr}
+      - {label: traditional, lang: en}
+      - {label: classic, lang: en}
+  - id: style.modern
+    kind: style
+    label: Modern
+    labels:
+      - {label: moderne, lang: fr}
+      - {label: modern, lang: en}
+      - {label: tendance, lang: fr}
+      - {label: trendy, lang: en}
+
+  # ---------------- color ----------------
+  - id: color.white
+    kind: color
+    label: White
+    labels: [{label: blanc, lang: fr}, {label: blanche, lang: fr}, {label: white, lang: en}, {label: bianco, lang: it}]
+  - id: color.blue
+    kind: color
+    label: Blue
+    labels: [{label: bleu, lang: fr}, {label: bleue, lang: fr}, {label: blue, lang: en}, {label: bleu marine, lang: fr}, {label: navy, lang: en}, {label: bleu ciel, lang: fr}, {label: sky blue, lang: en}]
+  - id: color.gold
+    kind: color
+    label: Gold
+    labels: [{label: doré, lang: fr}, {label: dorée, lang: fr}, {label: gold, lang: en}, {label: or, lang: fr}]
+  - id: color.black
+    kind: color
+    label: Black
+    labels: [{label: noir, lang: fr}, {label: noire, lang: fr}, {label: black, lang: en}]
+  - id: color.red
+    kind: color
+    label: Red
+    labels: [{label: rouge, lang: fr}, {label: red, lang: en}, {label: bordeaux, lang: fr}, {label: burgundy, lang: en}]
+  - id: color.green
+    kind: color
+    label: Green
+    labels: [{label: vert, lang: fr}, {label: verte, lang: fr}, {label: green, lang: en}, {label: émeraude, lang: fr}, {label: emerald, lang: en}]
+  - id: color.pink
+    kind: color
+    label: Pink
+    labels: [{label: rose, lang: fr}, {label: pink, lang: en}]
+  - id: color.purple
+    kind: color
+    label: Purple
+    labels: [{label: violet, lang: fr}, {label: violette, lang: fr}, {label: purple, lang: en}, {label: mauve, lang: fr}, {label: lilas, lang: fr}]
+  - id: color.yellow
+    kind: color
+    label: Yellow
+    labels: [{label: jaune, lang: fr}, {label: yellow, lang: en}, {label: moutarde, lang: fr}, {label: mustard, lang: en}]
+  - id: color.brown
+    kind: color
+    label: Brown
+    labels: [{label: marron, lang: fr}, {label: brown, lang: en}, {label: chocolat, lang: fr}, {label: camel, lang: any}]
+  - id: color.grey
+    kind: color
+    label: Grey
+    labels: [{label: gris, lang: fr}, {label: grise, lang: fr}, {label: grey, lang: en}, {label: gray, lang: en}, {label: argent, lang: fr}, {label: silver, lang: en}]
+  - id: color.beige
+    kind: color
+    label: Beige / cream
+    labels: [{label: beige, lang: any}, {label: crème, lang: fr}, {label: cream, lang: en}, {label: ivoire, lang: fr}, {label: ivory, lang: en}, {label: écru, lang: fr}]
+  - id: color.orange
+    kind: color
+    label: Orange
+    labels: [{label: orange, lang: any}, {label: corail, lang: fr}, {label: coral, lang: en}, {label: saumon, lang: fr}, {label: peach, lang: en}]
+  - id: color.turquoise
+    kind: color
+    label: Turquoise
+    labels: [{label: turquoise, lang: any}, {label: teal, lang: en}]
+  - id: color.multi
+    kind: color
+    label: Multicolour
+    labels: [{label: multicolore, lang: fr}, {label: multicolor, lang: en}, {label: multicoloured, lang: en}]
+
+  # ---------------- commerce signals ----------------
+  - id: signal.wholesale
+    kind: signal
+    label: Wholesale
+    labels:
+      - {label: vente en gros, lang: fr}
+      - {label: gros et détail, lang: fr}
+      - {label: gros et détails, lang: fr}
+      - {label: en gros, lang: fr}
+      - {label: grossiste, lang: fr}
+      - {label: wholesale, lang: en}
+      - {label: moq, lang: en}
+      - {label: import de dubai, lang: fr}
+      - {label: usine, lang: fr}
+  - id: signal.retail
+    kind: signal
+    label: Retail
+    labels:
+      - {label: vente en détail, lang: fr}
+      - {label: boutique, lang: fr}
+      - {label: magasin, lang: fr}
+      - {label: shop, lang: en}
+      - {label: store, lang: en}
+  - id: signal.order_dm
+    kind: signal
+    label: Orders by direct message
+    labels:
+      - {label: dm pour commander, lang: fr}
+      - {label: commande en dm, lang: fr}
+      - {label: commander en dm, lang: fr}
+      - {label: dm to order, lang: en}
+      - {label: dm for price, lang: en}
+      - {label: dm pour le prix, lang: fr}
+      - {label: inbox, lang: any}
+      - {label: en mp, lang: fr}
+      - {label: message privé, lang: fr}
+  - id: signal.whatsapp
+    kind: signal
+    label: WhatsApp channel
+    labels:
+      - {label: whatsapp, lang: any}
+      - {label: wa.me, lang: any}
+      - {label: appel et whatsapp, lang: fr}
+      - {label: appel ou whatsapp, lang: fr}
+      - {label: whatsapp business, lang: any}
+  - id: signal.snapchat
+    kind: signal
+    label: Snapchat channel
+    labels:
+      - {label: snapchat, lang: any}
+      - {label: snap, lang: any}
+  - id: signal.availability
+    kind: signal
+    label: Availability
+    labels:
+      - {label: disponible, lang: fr}
+      - {label: disponible sur commande, lang: fr}
+      - {label: sur commande, lang: fr}
+      - {label: en stock, lang: fr}
+      - {label: épuisé, lang: fr}
+      - {label: précommande, lang: fr}
+      - {label: available, lang: en}
+      - {label: in stock, lang: en}
+      - {label: sold out, lang: en}
+      - {label: pre-order, lang: en}
+  - id: signal.shipping
+    kind: signal
+    label: Shipping and delivery
+    labels:
+      - {label: livraison, lang: fr}
+      - {label: livraison partout, lang: fr}
+      - {label: livraison par gp, lang: fr}
+      - {label: gp dakar paris, lang: fr}
+      - {label: gp, lang: fr}
+      - {label: expédition, lang: fr}
+      - {label: envoi, lang: fr}
+      - {label: dhl, lang: any}
+      - {label: ships to, lang: en}
+      - {label: shipping, lang: en}
+      - {label: worldwide shipping, lang: en}
+      - {label: nationwide delivery, lang: en}
+      - {label: delivery, lang: en}
+  - id: signal.payment
+    kind: signal
+    label: Payment
+    labels:
+      - {label: wave, lang: any}
+      - {label: orange money, lang: any}
+      - {label: avance, lang: fr}
+      - {label: acompte, lang: fr}
+      - {label: paypal, lang: any}
+      - {label: paiement, lang: fr}
+      - {label: payment, lang: en}
+      - {label: transfer, lang: en}
+  - id: signal.timing
+    kind: signal
+    label: Lead time and deadlines
+    labels:
+      - {label: délai, lang: fr}
+      - {label: prêt en, lang: fr}
+      - {label: avant tabaski, lang: fr}
+      - {label: dernière commande, lang: fr}
+      - {label: clôture des commandes, lang: fr}
+      - {label: lead time, lang: en}
+      - {label: last orders, lang: en}
+  - id: signal.authenticity
+    kind: signal
+    label: Authenticity claims
+    labels:
+      - {label: original, lang: any}
+      - {label: authentique, lang: fr}
+      - {label: authentic, lang: en}
+      - {label: certifié, lang: fr}
+      - {label: made in austria, lang: any}
+      - {label: lisière, lang: fr}
+      - {label: signature dorée, lang: fr}
+      - {label: contrefaçon, lang: fr}
+      - {label: faux getzner, lang: fr}
+      - {label: vrai getzner, lang: fr}
+      - {label: genuine, lang: en}
+  - id: signal.promo
+    kind: signal
+    label: Promotion
+    labels:
+      - {label: promo, lang: any}
+      - {label: promotion, lang: any}
+      - {label: solde, lang: fr}
+      - {label: soldes, lang: fr}
+      - {label: prix cassé, lang: fr}
+      - {label: réduction, lang: fr}
+      - {label: discount, lang: en}
+      - {label: sale, lang: en}
+  - id: signal.price
+    kind: signal
+    label: Price mention
+    labels:
+      - {label: prix, lang: fr}
+      - {label: price, lang: en}
+      - {label: fcfa, lang: any}
+      - {label: f cfa, lang: any}
+      - {label: cfa, lang: any}
+      - {label: le mètre, lang: fr}
+      - {label: la pièce, lang: fr}
+      - {label: per yard, lang: en}
+      - {label: naira, lang: en}
+      - {label: euros, lang: any}
+      - {label: dollars, lang: any}
+
+# Concepts that mark a query or observation as Bazin-relevant when present (used by the relevance gate heuristics).
+relevance_anchor_concepts:
+  - fabric.bazin
+  - fabric.bazin.riche
+  - fabric.bazin.guinea_brocade
+  - fabric.getzner
+  - garment.boubou
+  - garment.grand_boubou
+  - garment.taille_basse
+  - garment.ndoket
+  - garment.babban_riga
+  - garment.agbada
+  - technique.dyeing
