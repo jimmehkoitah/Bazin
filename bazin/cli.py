@@ -292,10 +292,12 @@ def search_cmd(q: str, near: Optional[str] = None, ships_to: Optional[str] = Non
 
 
 @app.command("serve")
-def serve(host: str = "0.0.0.0", port: int = 8000) -> None:
+def serve(host: str = "0.0.0.0", port: Optional[int] = None) -> None:
+    import os
+
     import uvicorn
 
-    uvicorn.run("bazin.search.api:app", host=host, port=port, reload=False)
+    uvicorn.run("bazin.search.api:app", host=host, port=port or int(os.environ.get("PORT", "8000")), reload=False)
 
 
 @app.command("status")
@@ -314,12 +316,13 @@ def status() -> None:
 
 
 @app.command("run-all")
-def run_all(fixtures: Optional[Path] = None, hub_priority: int = 1, limit_queries: int = 200, images: bool = False) -> None:
+def run_all(fixtures: Optional[Path] = None, hub_priority: int = 1, limit_queries: Optional[int] = None, images: bool = False) -> None:
     """The whole sprint-1 pipeline in one go (fixtures for offline runs)."""
     db_migrate()
     seed()
     plan_cmd(hub_priority)
-    ingest_discover(limit_queries, None, 50, fixtures)
+    # Fixture runs are free, so run every planned query; live runs default to a cautious batch.
+    ingest_discover(limit_queries or (10000 if fixtures else 200), None, 50, fixtures)
     ingest_prefilter()
     ingest_profiles(1000, None, fixtures)
     gate_cmd(2000, images)

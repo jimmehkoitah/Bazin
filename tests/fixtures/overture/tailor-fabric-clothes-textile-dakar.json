@@ -1,0 +1,70 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.1 084b4234",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-10T21:14:02Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 4821990331,
+      "lat": 14.6752,
+      "lon": -17.4436,
+      "tags": {
+        "name": "Atelier Khadija Couture",
+        "craft": "tailor",
+        "shop": "tailor",
+        "phone": "+221 77 123 45 67",
+        "website": "https://atelierkhadija.sn/",
+        "addr:city": "Dakar",
+        "addr:street": "Rue 11 x Avenue Blaise Diagne",
+        "opening_hours": "Mo-Sa 09:00-20:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4821990332,
+      "lat": 14.6741,
+      "lon": -17.4392,
+      "tags": {
+        "name": "Sandaga Tissus Bazin",
+        "shop": "fabric",
+        "contact:phone": "+221 77 554 21 09",
+        "contact:website": "https://sandagatissus.sn/",
+        "addr:city": "Dakar",
+        "addr:street": "Avenue Émile Badiane"
+      }
+    },
+    {
+      "type": "way",
+      "id": 998877665,
+      "center": {
+        "lat": 14.7063,
+        "lon": -17.461
+      },
+      "nodes": [
+        1,
+        2,
+        3
+      ],
+      "tags": {
+        "name": "Marché HLM — Tissus et couture",
+        "shop": "clothes",
+        "addr:city": "Dakar",
+        "addr:street": "Avenue Cheikh Anta Diop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4821990334,
+      "lat": 14.6901,
+      "lon": -17.4512,
+      "tags": {
+        "name": "Broderie Tailleur Ndiaye",
+        "craft": "embroiderer",
+        "addr:city": "Dakar"
+      }
+    }
+  ]
+}

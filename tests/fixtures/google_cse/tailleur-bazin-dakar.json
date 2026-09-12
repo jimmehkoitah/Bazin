@@ -1,0 +1,37 @@
+{
+  "kind": "customsearch#search",
+  "searchInformation": {
+    "totalResults": "4310",
+    "formattedSearchTime": "0.32"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Atelier Khadija — Couture bazin riche à Dakar",
+      "link": "https://atelierkhadija.sn/",
+      "displayLink": "atelierkhadija.sn",
+      "snippet": "Atelier de couture à Dakar spécialisé dans le bazin riche Getzner brodé main. Grand boubou, ndoket, taille basse sur mesure."
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Couture Fatou Bazin | Facebook",
+      "link": "https://www.facebook.com/CoutureFatouBazin",
+      "displayLink": "www.facebook.com",
+      "snippet": "Ndoket, taille basse et grand boubou en bazin riche. Livraison Dakar + GP Paris. Tél 77 908 44 12."
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Bazin riche Getzner — Sandaga Tissus Dakar",
+      "link": "https://sandagatissus.sn/collections/bazin-riche",
+      "displayLink": "sandagatissus.sn",
+      "snippet": "Bazin riche Getzner 100% coton, le mètre à partir de 12 000 FCFA."
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Tailleur bazin Dakar - Expat-Dakar",
+      "link": "https://www.expat-dakar.com/services/couture/tailleur-bazin",
+      "displayLink": "www.expat-dakar.com",
+      "snippet": "Annonces de tailleurs à Dakar : bazin riche, broderie, sur mesure."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.1 084b4234",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-10T21:14:02Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 4821990331,
+      "lat": 14.6752,
+      "lon": -17.4436,
+      "tags": {
+        "name": "Atelier Khadija Couture",
+        "craft": "tailor",
+        "shop": "tailor",
+        "phone": "+221 77 123 45 67",
+        "website": "https://atelierkhadija.sn/",
+        "addr:city": "Dakar",
+        "addr:street": "Rue 11 x Avenue Blaise Diagne",
+        "opening_hours": "Mo-Sa 09:00-20:00"
+      }
+    }
+  ]
+}

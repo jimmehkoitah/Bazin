@@ -1,0 +1,94 @@
+{
+  "page": [
+    {
+      "facebookUrl": "https://www.facebook.com/AtelierBazinDakar",
+      "pageId": "100064821990331",
+      "pageName": "AtelierBazinDakar",
+      "title": "Atelier Bazin Dakar",
+      "intro": "Couture sur mesure bazin riche Getzner, broderie main. Tabaski & mariages. Commandes WhatsApp +221 76 401 22 18.",
+      "about_me": {
+        "text": "Couture sur mesure bazin riche Getzner, broderie main. Tabaski & mariages. Commandes WhatsApp +221 76 401 22 18."
+      },
+      "categories": [
+        "Clothing store",
+        "Tailor"
+      ],
+      "likes": 12840,
+      "followers": 13402,
+      "phone": "+221 76 401 22 18",
+      "email": "contact@atelierbazindakar.sn",
+      "address": "HLM 5, Dakar, Sénégal",
+      "websites": [
+        "https://atelierbazindakar.com"
+      ],
+      "profilePictureUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/AtelierBazinDakar_pp.jpg",
+      "coverPhotoUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/AtelierBazinDakar_cover.jpg",
+      "creation_date": "2019-03-04"
+    }
+  ],
+  "posts": [
+    {
+      "facebookUrl": "https://www.facebook.com/AtelierBazinDakar",
+      "postId": "1122334455667788",
+      "pageName": "AtelierBazinDakar",
+      "url": "https://www.facebook.com/AtelierBazinDakar/posts/1122334455667788",
+      "time": "2026-08-17T09:12:00.000Z",
+      "text": "Collection Tabaski 2026 disponible ! Grand boubou bazin riche Getzner brodé : 165 000 FCFA tout compris. Délai 10 jours. WhatsApp +221 76 401 22 18 #bazinriche #tabaski2026",
+      "likes": 412,
+      "comments": 63,
+      "shares": 28,
+      "media": [
+        {
+          "thumbnail": "https://scontent.fdkr1-1.fna.fbcdn.net/post_1122334455667788.jpg",
+          "photo_image": {
+            "uri": "https://scontent.fdkr1-1.fna.fbcdn.net/post_1122334455667788.jpg",
+            "width": 960,
+            "height": 720
+          }
+        }
+      ]
+    },
+    {
+      "facebookUrl": "https://www.facebook.com/AtelierBazinDakar",
+      "postId": "1122334455667789",
+      "pageName": "AtelierBazinDakar",
+      "url": "https://www.facebook.com/AtelierBazinDakar/posts/1122334455667789",
+      "time": "2026-08-04T15:40:00.000Z",
+      "text": "Arrivage bazin riche Getzner 100% coton — plusieurs coloris. Le mètre 14 000 FCFA, la pièce de 5 m 65 000 FCFA.",
+      "likes": 233,
+      "comments": 41,
+      "shares": 12,
+      "media": [
+        {
+          "thumbnail": "https://scontent.fdkr1-1.fna.fbcdn.net/post_1122334455667789.jpg",
+          "photo_image": {
+            "uri": "https://scontent.fdkr1-1.fna.fbcdn.net/post_1122334455667789.jpg",
+            "width": 960,
+            "height": 720
+          }
+        }
+      ]
+    },
+    {
+      "facebookUrl": "https://www.facebook.com/AtelierBazinDakar",
+      "postId": "1122334455667790",
+      "pageName": "AtelierBazinDakar",
+      "url": "https://www.facebook.com/AtelierBazinDakar/posts/1122334455667790",
+      "time": "2026-07-26T11:05:00.000Z",
+      "text": "Merci à nos clientes de Paris 🇫🇷 Livraison GP chaque semaine. Ndoket brodé main.",
+      "likes": 189,
+      "comments": 22,
+      "shares": 5,
+      "media": [
+        {
+          "thumbnail": "https://scontent.fdkr1-1.fna.fbcdn.net/post_1122334455667790.jpg",
+          "photo_image": {
+            "uri": "https://scontent.fdkr1-1.fna.fbcdn.net/post_1122334455667790.jpg",
+            "width": 960,
+            "height": 720
+          }
+        }
+      ]
+    }
+  ]
+}

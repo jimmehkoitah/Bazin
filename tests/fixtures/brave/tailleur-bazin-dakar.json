@@ -1,0 +1,48 @@
+{
+  "type": "search",
+  "query": {
+    "original": "tailleur bazin Dakar",
+    "country": "sn",
+    "more_results_available": true
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Atelier Khadija — Couture bazin riche à Dakar",
+        "url": "https://atelierkhadija.sn/",
+        "description": "Atelier de couture à Dakar spécialisé dans le bazin riche Getzner brodé main. Grand boubou, ndoket, taille basse sur mesure. Livraison Sénégal, France et USA.",
+        "profile": {
+          "name": "atelierkhadija",
+          "long_name": "atelierkhadija.sn"
+        },
+        "language": "fr",
+        "age": "2026-06-02T00:00:00"
+      },
+      {
+        "title": "Atelier Bazin Dakar - Facebook",
+        "url": "https://www.facebook.com/AtelierBazinDakar",
+        "description": "Couture sur mesure bazin riche Getzner, broderie main. Tabaski & mariages. Commandes WhatsApp +221 76 401 22 18.",
+        "language": "fr"
+      },
+      {
+        "title": "Les 10 meilleurs tailleurs de Dakar pour la Tabaski 2026",
+        "url": "https://senemode.sn/blog/meilleurs-tailleurs-dakar-tabaski-2026",
+        "description": "Notre sélection d'ateliers dakarois : broderie machine, bazin riche teinté à la main, délais et prix constatés de 90 000 à 250 000 FCFA.",
+        "language": "fr"
+      },
+      {
+        "title": "atelier.khadija.dakar • Instagram",
+        "url": "https://www.instagram.com/atelier.khadija.dakar/",
+        "description": "18,4K followers · Atelier de couture Dakar 🇸🇳 Bazin riche Getzner & broderie main. WhatsApp +221 77 123 45 67.",
+        "language": "fr"
+      },
+      {
+        "title": "Sandaga Tissus — Bazin riche et Getzner en gros",
+        "url": "https://sandagatissus.sn/collections/bazin-riche",
+        "description": "Vente en gros et détail de bazin riche Getzner au marché Sandaga, Dakar. Le mètre à partir de 12 000 FCFA.",
+        "language": "fr"
+      }
+    ]
+  }
+}

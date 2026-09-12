@@ -1,0 +1,166 @@
+{
+  "channel": {
+    "kind": "youtube#channelListResponse",
+    "items": [
+      {
+        "kind": "youtube#channel",
+        "id": "UCk8p2Xb3DakarBazin00012",
+        "snippet": {
+          "title": "Dakar Couture TV",
+          "description": "Chaîne de l'atelier Khadija à Dakar 🇸🇳 Tutoriels couture bazin riche, broderie et teinture. Commandes sur mesure WhatsApp +221 77 123 45 67. Boutique : https://atelierkhadija.sn",
+          "customUrl": "@dakarcouturetv",
+          "publishedAt": "2019-02-14T11:22:33Z",
+          "thumbnails": {
+            "high": {
+              "url": "https://yt3.ggpht.com/dakarcouturetv=s800",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "country": "SN"
+        },
+        "statistics": {
+          "viewCount": "2841903",
+          "subscriberCount": "48200",
+          "videoCount": "312"
+        }
+      }
+    ]
+  },
+  "search": {
+    "kind": "youtube#searchListResponse",
+    "items": [
+      {
+        "kind": "youtube#searchResult",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "bZn1RicheDkr"
+        },
+        "snippet": {
+          "publishedAt": "2026-06-11T10:00:07Z",
+          "channelId": "UCk8p2Xb3DakarBazin00012",
+          "title": "Couture bazin riche : grand boubou brodé étape par étape",
+          "description": "Tutoriel complet de couture d'un grand boubou en bazin riche Getzner. Prix atelier : 150 000 FCFA la tenue. WhatsApp +221 77 123 45 67.",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/bZn1RicheDkr/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/bZn1RicheDkr/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/bZn1RicheDkr/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "Dakar Couture TV",
+          "liveBroadcastContent": "none",
+          "publishTime": "2026-06-11T10:00:07Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "bZn2Brodrie8"
+        },
+        "snippet": {
+          "publishedAt": "2026-05-22T08:30:00Z",
+          "channelId": "UCk8p2Xb3DakarBazin00012",
+          "title": "Broderie machine sur bazin riche — motifs Tabaski 2026",
+          "description": "Démonstration de broderie sur bazin riche teinté à Dakar. #bazinriche #tabaski2026",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/bZn2Brodrie8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/bZn2Brodrie8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/bZn2Brodrie8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "Dakar Couture TV",
+          "liveBroadcastContent": "none",
+          "publishTime": "2026-05-22T08:30:00Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "bZn3Teinture"
+        },
+        "snippet": {
+          "publishedAt": "2026-04-30T17:45:12Z",
+          "channelId": "UCk8p2Xb3DakarBazin00012",
+          "title": "Teinture du bazin riche : indigo et damassé",
+          "description": "Comment le bazin riche est teinté et battu au maillet à Dakar et Bamako.",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/bZn3Teinture/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/bZn3Teinture/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/bZn3Teinture/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "Dakar Couture TV",
+          "liveBroadcastContent": "none",
+          "publishTime": "2026-04-30T17:45:12Z"
+        }
+      }
+    ]
+  },
+  "videos": {
+    "kind": "youtube#videoListResponse",
+    "items": [
+      {
+        "kind": "youtube#video",
+        "id": "bZn1RicheDkr",
+        "statistics": {
+          "viewCount": "184203",
+          "likeCount": "9120",
+          "commentCount": "412"
+        }
+      },
+      {
+        "kind": "youtube#video",
+        "id": "bZn2Brodrie8",
+        "statistics": {
+          "viewCount": "92411",
+          "likeCount": "4302",
+          "commentCount": "188"
+        }
+      },
+      {
+        "kind": "youtube#video",
+        "id": "bZn3Teinture",
+        "statistics": {
+          "viewCount": "51380",
+          "likeCount": "2211",
+          "commentCount": "97"
+        }
+      }
+    ]
+  }
+}

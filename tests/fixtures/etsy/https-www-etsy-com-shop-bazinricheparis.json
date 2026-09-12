@@ -1,0 +1,184 @@
+{
+  "shop": {
+    "shop_id": 32118844,
+    "shop_name": "BazinRicheParis",
+    "title": "Bazin riche Getzner & boubous sur mesure — Paris",
+    "announcement": "Atelier franco-sénégalais à Paris 18e (Château Rouge). Bazin riche Getzner original, boubous et ndoket sur mesure. WhatsApp +33 6 12 44 90 21.",
+    "currency_code": "EUR",
+    "url": "https://www.etsy.com/shop/BazinRicheParis",
+    "num_favorers": 1842,
+    "listing_active_count": 64,
+    "shop_location_country_iso": "FR",
+    "is_vacation": false
+  },
+  "listings": {
+    "count": 3,
+    "results": [
+      {
+        "listing_id": 1602445501,
+        "user_id": 88112233,
+        "shop_id": 32118844,
+        "title": "Bazin Riche Getzner Fabric 5 Yards Royal Blue Damask",
+        "description": "Authentic Getzner bazin riche, 100% cotton damask, 5 yards (4.6 m). Dyed and beaten in Bamako. Ships from Paris in 48h.",
+        "state": "active",
+        "creation_timestamp": 1770000000,
+        "original_creation_timestamp": 1770000000,
+        "quantity": 12,
+        "url": "https://www.etsy.com/listing/1602445501/bazin-riche-getzner-fabric-5-yards-royal",
+        "num_favorers": 312,
+        "views": 4210,
+        "language": "en-US",
+        "price": {
+          "amount": 18000,
+          "divisor": 100,
+          "currency_code": "EUR"
+        },
+        "taxonomy_id": 1633,
+        "tags": [
+          "bazin riche",
+          "getzner",
+          "african fabric",
+          "brocade",
+          "boubou"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "who_made": "i_did",
+        "when_made": "made_to_order",
+        "shipping_profile_id": 223344,
+        "shop": {
+          "shop_id": 32118844,
+          "shop_name": "BazinRicheParis",
+          "title": "Bazin riche Getzner & boubous sur mesure — Paris",
+          "announcement": "Atelier franco-sénégalais à Paris 18e (Château Rouge). Bazin riche Getzner original, boubous et ndoket sur mesure. WhatsApp +33 6 12 44 90 21.",
+          "currency_code": "EUR",
+          "url": "https://www.etsy.com/shop/BazinRicheParis",
+          "num_favorers": 1842,
+          "listing_active_count": 64,
+          "shop_location_country_iso": "FR",
+          "is_vacation": false
+        },
+        "images": [
+          {
+            "listing_image_id": 1602445502,
+            "url_570xN": "https://i.etsystatic.com/1602445501_570xN.jpg",
+            "url_fullxfull": "https://i.etsystatic.com/1602445501_fullxfull.jpg",
+            "full_width": 2000,
+            "full_height": 1500
+          }
+        ]
+      },
+      {
+        "listing_id": 1602445502,
+        "user_id": 88112233,
+        "shop_id": 32118844,
+        "title": "Grand Boubou Bazin Riche Hand Embroidered Made to Order",
+        "description": "Made-to-order grand boubou in bazin riche Getzner with hand embroidery. Please send your measurements after ordering. 3 weeks lead time.",
+        "state": "active",
+        "creation_timestamp": 1772400000,
+        "original_creation_timestamp": 1772400000,
+        "quantity": 12,
+        "url": "https://www.etsy.com/listing/1602445502/grand-boubou-bazin-riche-hand-embroidere",
+        "num_favorers": 244,
+        "views": 2180,
+        "language": "en-US",
+        "price": {
+          "amount": 42000,
+          "divisor": 100,
+          "currency_code": "EUR"
+        },
+        "taxonomy_id": 1633,
+        "tags": [
+          "bazin riche",
+          "getzner",
+          "african fabric",
+          "brocade",
+          "boubou"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "who_made": "i_did",
+        "when_made": "made_to_order",
+        "shipping_profile_id": 223344,
+        "shop": {
+          "shop_id": 32118844,
+          "shop_name": "BazinRicheParis",
+          "title": "Bazin riche Getzner & boubous sur mesure — Paris",
+          "announcement": "Atelier franco-sénégalais à Paris 18e (Château Rouge). Bazin riche Getzner original, boubous et ndoket sur mesure. WhatsApp +33 6 12 44 90 21.",
+          "currency_code": "EUR",
+          "url": "https://www.etsy.com/shop/BazinRicheParis",
+          "num_favorers": 1842,
+          "listing_active_count": 64,
+          "shop_location_country_iso": "FR",
+          "is_vacation": false
+        },
+        "images": [
+          {
+            "listing_image_id": 1602445503,
+            "url_570xN": "https://i.etsystatic.com/1602445502_570xN.jpg",
+            "url_fullxfull": "https://i.etsystatic.com/1602445502_fullxfull.jpg",
+            "full_width": 2000,
+            "full_height": 1500
+          }
+        ]
+      },
+      {
+        "listing_id": 1602445503,
+        "user_id": 88112233,
+        "shop_id": 32118844,
+        "title": "Ndoket Bazin Riche Women Dress Tabaski 2026",
+        "description": "Ndoket dress in bazin riche, custom sizing, delivered worldwide.",
+        "state": "active",
+        "creation_timestamp": 1775000000,
+        "original_creation_timestamp": 1775000000,
+        "quantity": 12,
+        "url": "https://www.etsy.com/listing/1602445503/ndoket-bazin-riche-women-dress-tabaski-2",
+        "num_favorers": 133,
+        "views": 1544,
+        "language": "en-US",
+        "price": {
+          "amount": 25500,
+          "divisor": 100,
+          "currency_code": "EUR"
+        },
+        "taxonomy_id": 1633,
+        "tags": [
+          "bazin riche",
+          "getzner",
+          "african fabric",
+          "brocade",
+          "boubou"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "who_made": "i_did",
+        "when_made": "made_to_order",
+        "shipping_profile_id": 223344,
+        "shop": {
+          "shop_id": 32118844,
+          "shop_name": "BazinRicheParis",
+          "title": "Bazin riche Getzner & boubous sur mesure — Paris",
+          "announcement": "Atelier franco-sénégalais à Paris 18e (Château Rouge). Bazin riche Getzner original, boubous et ndoket sur mesure. WhatsApp +33 6 12 44 90 21.",
+          "currency_code": "EUR",
+          "url": "https://www.etsy.com/shop/BazinRicheParis",
+          "num_favorers": 1842,
+          "listing_active_count": 64,
+          "shop_location_country_iso": "FR",
+          "is_vacation": false
+        },
+        "images": [
+          {
+            "listing_image_id": 1602445504,
+            "url_570xN": "https://i.etsystatic.com/1602445503_570xN.jpg",
+            "url_fullxfull": "https://i.etsystatic.com/1602445503_fullxfull.jpg",
+            "full_width": 2000,
+            "full_height": 1500
+          }
+        ]
+      }
+    ]
+  }
+}

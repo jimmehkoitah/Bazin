@@ -1,0 +1,95 @@
+# Render Blueprint for the Bazin discovery engine.
+# Apply from the Render dashboard (Blueprints -> New Blueprint Instance) after pushing this repo.
+# Secrets marked sync: false are entered once in the dashboard.
+
+databases:
+  - name: bazin-db
+    plan: basic-256mb        # enough for v1 (thousands of vendors, ~100k observations); resize later
+    postgresMajorVersion: "16"
+
+services:
+  - type: web
+    name: bazin-web
+    runtime: python
+    plan: starter
+    buildCommand: pip install -e .
+    startCommand: uvicorn bazin.search.api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: BAZIN_ENV
+        value: prod
+      - key: BAZIN_DATABASE_URL
+        fromDatabase:
+          name: bazin-db
+          property: connectionString
+      - key: BAZIN_ANTHROPIC_API_KEY
+        sync: false
+      - key: BAZIN_VOYAGE_API_KEY
+        sync: false
+      - key: BAZIN_USE_BATCHES
+        value: "false"       # the web process only parses queries; batches are for the cron jobs
+
+  # Daily pipeline: discovery, profiles, gate, resolve, enrich, classify, evidence, score.
+  - type: cron
+    name: bazin-daily
+    runtime: python
+    plan: starter
+    schedule: "0 3 * * *"
+    buildCommand: pip install -e .
+    startCommand: >
+      bazin db migrate && bazin seed && bazin plan --hub-priority 1 &&
+      bazin ingest discover --limit 150 && bazin ingest prefilter &&
+      bazin ingest profiles --limit 400 && bazin gate && bazin resolve &&
+      bazin enrich --limit 300 && bazin classify --limit 3000 &&
+      bazin evidence --complaints && bazin score && bazin status
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: BAZIN_ENV
+        value: prod
+      - key: BAZIN_DATABASE_URL
+        fromDatabase:
+          name: bazin-db
+          property: connectionString
+      - key: BAZIN_RAW_STORE_DIR
+        value: /tmp/bazin-raw      # ephemeral on Render; point at a bucket for production retention
+      - key: BAZIN_LLM_BUDGET_USD
+        value: "400"
+      - key: BAZIN_ANTHROPIC_API_KEY
+        sync: false
+      - key: BAZIN_VOYAGE_API_KEY
+        sync: false
+      - key: BAZIN_APIFY_TOKEN
+        sync: false
+      - key: BAZIN_BRAVE_API_KEY
+        sync: false
+      - key: BAZIN_YOUTUBE_API_KEY
+        sync: false
+      - key: BAZIN_ETSY_API_KEY
+        sync: false
+      - key: BAZIN_YELP_API_KEY
+        sync: false
+
+  # Weekly: re-embed and re-cluster, then the two-judge QA sample.
+  - type: cron
+    name: bazin-weekly
+    runtime: python
+    plan: starter
+    schedule: "0 5 * * 1"
+    buildCommand: pip install -e .
+    startCommand: bazin cluster && bazin qa && bazin status
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: BAZIN_ENV
+        value: prod
+      - key: BAZIN_DATABASE_URL
+        fromDatabase:
+          name: bazin-db
+          property: connectionString
+      - key: BAZIN_ANTHROPIC_API_KEY
+        sync: false
+      - key: BAZIN_VOYAGE_API_KEY
+        sync: false

@@ -1,0 +1,175 @@
+{
+  "kind": "youtube#searchListResponse",
+  "regionCode": "SN",
+  "pageInfo": {
+    "totalResults": 4821,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bZn1RicheDkr"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-11T10:00:07Z",
+        "channelId": "UCk8p2Xb3DakarBazin00012",
+        "title": "Couture bazin riche : grand boubou brodé étape par étape",
+        "description": "Tutoriel complet de couture d'un grand boubou en bazin riche Getzner. Prix atelier : 150 000 FCFA la tenue. WhatsApp +221 77 123 45 67.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bZn1RicheDkr/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bZn1RicheDkr/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bZn1RicheDkr/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Dakar Couture TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-11T10:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bZn2Brodrie8"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-22T08:30:00Z",
+        "channelId": "UCk8p2Xb3DakarBazin00012",
+        "title": "Broderie machine sur bazin riche — motifs Tabaski 2026",
+        "description": "Démonstration de broderie sur bazin riche teinté à Dakar. #bazinriche #tabaski2026",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bZn2Brodrie8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bZn2Brodrie8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bZn2Brodrie8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Dakar Couture TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-22T08:30:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bZn3Teinture"
+      },
+      "snippet": {
+        "publishedAt": "2026-04-30T17:45:12Z",
+        "channelId": "UCk8p2Xb3DakarBazin00012",
+        "title": "Teinture du bazin riche : indigo et damassé",
+        "description": "Comment le bazin riche est teinté et battu au maillet à Dakar et Bamako.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bZn3Teinture/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bZn3Teinture/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bZn3Teinture/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Dakar Couture TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-04-30T17:45:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bMk1Getzner7"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-02T12:15:00Z",
+        "channelId": "UCm4q7Yc9BamakoMode00023",
+        "title": "Getzner vs bazin local : comment reconnaître l'original",
+        "description": "Guide d'achat du bazin riche Getzner au Grand Marché de Bamako.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bMk1Getzner7/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bMk1Getzner7/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bMk1Getzner7/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Bamako Mode",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-02T12:15:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bMk2Boubou45"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-18T09:05:00Z",
+        "channelId": "UCm4q7Yc9BamakoMode00023",
+        "title": "Grand boubou homme bazin riche — essayage",
+        "description": "Modèles de grand boubou pour la Tabaski, 55 000 FCFA la pièce de 5 mètres.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bMk2Boubou45/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bMk2Boubou45/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bMk2Boubou45/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Bamako Mode",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-18T09:05:00Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "facebookUrl": "https://www.facebook.com/AtelierBazinDakar",
+    "pageId": "100064821990331",
+    "pageName": "AtelierBazinDakar",
+    "title": "Atelier Bazin Dakar",
+    "intro": "Couture sur mesure bazin riche Getzner, broderie main. Tabaski & mariages. Commandes WhatsApp +221 76 401 22 18.",
+    "about_me": {
+      "text": "Couture sur mesure bazin riche Getzner, broderie main. Tabaski & mariages. Commandes WhatsApp +221 76 401 22 18."
+    },
+    "categories": [
+      "Clothing store",
+      "Tailor"
+    ],
+    "likes": 12840,
+    "followers": 13402,
+    "phone": "+221 76 401 22 18",
+    "email": "contact@atelierbazindakar.sn",
+    "address": "HLM 5, Dakar, Sénégal",
+    "websites": [
+      "https://atelierbazindakar.com"
+    ],
+    "profilePictureUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/AtelierBazinDakar_pp.jpg",
+    "coverPhotoUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/AtelierBazinDakar_cover.jpg",
+    "creation_date": "2019-03-04"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/GetznerTissusDakar",
+    "pageId": "100078112440921",
+    "pageName": "GetznerTissusDakar",
+    "title": "Getzner Tissus Dakar",
+    "intro": "Importateur bazin riche Getzner (Autriche). Vente en gros et détail, Marché Sandaga.",
+    "about_me": {
+      "text": "Importateur bazin riche Getzner (Autriche). Vente en gros et détail, Marché Sandaga."
+    },
+    "categories": [
+      "Fabric store",
+      "Wholesaler"
+    ],
+    "likes": 8210,
+    "followers": 8654,
+    "phone": "+221 33 821 44 90",
+    "email": "contact@getznertissusdakar.sn",
+    "address": "Marché Sandaga, Dakar",
+    "websites": [
+      "https://getznertissusdakar.sn"
+    ],
+    "profilePictureUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/GetznerTissusDakar_pp.jpg",
+    "coverPhotoUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/GetznerTissusDakar_cover.jpg",
+    "creation_date": "2019-03-04"
+  },
+  {
+    "facebookUrl": "https://www.facebook.com/CoutureFatouBazin",
+    "pageId": "100091223344556",
+    "pageName": "CoutureFatouBazin",
+    "title": "Couture Fatou Bazin",
+    "intro": "Ndoket, taille basse et grand boubou en bazin riche. Livraison Dakar + GP Paris.",
+    "about_me": {
+      "text": "Ndoket, taille basse et grand boubou en bazin riche. Livraison Dakar + GP Paris."
+    },
+    "categories": [
+      "Tailor"
+    ],
+    "likes": 3410,
+    "followers": 3512,
+    "phone": "+221 77 908 44 12",
+    "email": "contact@couturefatoubazin.sn",
+    "address": "Parcelles Assainies Unité 15, Dakar",
+    "websites": [],
+    "profilePictureUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/CoutureFatouBazin_pp.jpg",
+    "coverPhotoUrl": "https://scontent.fdkr1-1.fna.fbcdn.net/CoutureFatouBazin_cover.jpg",
+    "creation_date": "2019-03-04"
+  }
+]

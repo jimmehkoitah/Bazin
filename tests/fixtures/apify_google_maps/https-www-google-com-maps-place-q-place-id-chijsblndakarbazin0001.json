@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Atelier Khadija Couture",
+    "placeId": "ChIJSbLnDakarBazin0001",
+    "categoryName": "Tailor",
+    "categories": [
+      "Tailor",
+      "Fabric store"
+    ],
+    "address": "Rue 11 x Avenue Blaise Diagne, Dakar, Sénégal",
+    "street": "Rue 11 x Avenue Blaise Diagne",
+    "city": "Dakar",
+    "countryCode": "SN",
+    "phone": "+221 77 123 45 67",
+    "phoneUnformatted": "+221771234567",
+    "website": "https://atelierkhadija.sn/",
+    "totalScore": 4.7,
+    "reviewsCount": 128,
+    "location": {
+      "lat": 14.6752,
+      "lng": -17.4436
+    },
+    "url": "https://www.google.com/maps/search/?api=1&query=Atelier+Khadija+Couture",
+    "imageUrl": "https://lh5.googleusercontent.com/p/ChIJSbLnDakarBazin0001=w408-h306-k-no",
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 8 PM"
+      }
+    ]
+  }
+]

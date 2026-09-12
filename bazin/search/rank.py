@@ -112,6 +112,29 @@ def text_match(parsed: ParsedQuery, row: dict[str, Any], query_vec: list[float] 
     return 0.6 * sem + 0.4 * lexical
 
 
+def display_location(row: dict[str, Any], hub: Hub | None, ships_to: str | None) -> dict[str, Any] | None:
+    """The physical location to show: the one nearest the hub, else in the ships-to country, else the primary country."""
+    physical = [l for l in (row.get("locations") or []) if l.get("kind") != "ships_to"]
+    if not physical:
+        return None
+    if hub is not None:
+        def dist(l: dict[str, Any]) -> float:
+            if l.get("lat") is not None and l.get("lon") is not None:
+                return haversine_km(hub.lat, hub.lon, float(l["lat"]), float(l["lon"]))
+            if l.get("country") == hub.country and (l.get("city") or "").lower() == hub.city.lower():
+                return 0.0
+            return 1e9
+        return min(physical, key=dist)
+    if ships_to:
+        for l in physical:
+            if l.get("country") == ships_to:
+                return l
+    for l in physical:
+        if l.get("country") == row.get("primary_country"):
+            return l
+    return physical[0]
+
+
 def geo_fit(row: dict[str, Any], hub: Hub | None, radius_km: float | None, ships_to: str | None) -> tuple[str, float, float | None]:
     locs = row.get("locations") or []
     physical = [l for l in locs if l.get("kind") != "ships_to"]
@@ -191,13 +214,13 @@ def search(conn, parsed: ParsedQuery, opts: SearchOptions, query_vec: list[float
         if cl:
             entry = cluster_counts.setdefault(str(cl["id"]), {"id": str(cl["id"]), "label": cl["label"], "hue": cl["hue"], "count": 0})
             entry["count"] += 1
-        physical = [l for l in (r["locations"] or []) if l.get("kind") != "ships_to"]
+        shown = display_location(r, hub, ships_to)
         results.append({
             "id": str(r["id"]),
             "name": r["canonical_name"],
             "business_type": r["business_type"],
-            "city": physical[0]["city"] if physical else None,
-            "country": physical[0]["country"] if physical else r["primary_country"],
+            "city": shown["city"] if shown else None,
+            "country": shown["country"] if shown else r["primary_country"],
             "score": round(float(r["quality_score"] or 0.0), 3),
             "rank": round(rank, 3),
             "cluster": {"id": str(cl["id"]), "label": cl["label"], "hue": cl["hue"], "css": hue_to_css(cl["hue"])} if cl else None,

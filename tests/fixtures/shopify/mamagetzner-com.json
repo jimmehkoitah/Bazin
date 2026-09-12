@@ -1,0 +1,232 @@
+{
+  "robots_txt": "User-agent: *\nDisallow: /admin\nDisallow: /cart\nDisallow: /checkout\nDisallow: /account\nDisallow: /search\nAllow: /products.json\nSitemap: https://mamagetzner.com/sitemap.xml\n",
+  "meta": {
+    "name": "Mama Getzner",
+    "currency": "EUR",
+    "country": "FR",
+    "domain": "mamagetzner.com"
+  },
+  "products": {
+    "products": [
+      {
+        "id": 7712334455001,
+        "title": "Bazin Riche Getzner Bleu Roi — pièce de 5 mètres",
+        "handle": "bazin-riche-getzner-bleu-roi",
+        "body_html": "<p><strong>Bazin riche Getzner</strong> 100% coton damassé, teinté et battu à Bamako. Pièce de 5 mètres, largeur 150 cm. Idéal grand boubou et ndoket.</p><p>Livraison France 48h, Europe 5 jours.</p>",
+        "published_at": "2026-02-12T10:00:00+01:00",
+        "created_at": "2026-02-11T09:00:00+01:00",
+        "updated_at": "2026-02-12T10:00:00+01:00",
+        "vendor": "Mama Getzner",
+        "product_type": "Bazin riche",
+        "tags": [
+          "bazin riche",
+          "getzner",
+          "tissu",
+          "damassé"
+        ],
+        "variants": [
+          {
+            "id": 7712334455002,
+            "title": "5 mètres",
+            "option1": "5 mètres",
+            "price": "189.00",
+            "sku": "MG-7712334455001-5M",
+            "available": true,
+            "grams": 1400,
+            "presentment_prices": [
+              {
+                "price": {
+                  "amount": "189.00",
+                  "currency_code": "EUR"
+                }
+              }
+            ]
+          },
+          {
+            "id": 7712334455003,
+            "title": "10 mètres",
+            "option1": "10 mètres",
+            "price": "359.10",
+            "sku": "MG-7712334455001-10M",
+            "available": true,
+            "grams": 2800,
+            "presentment_prices": [
+              {
+                "price": {
+                  "amount": "359.10",
+                  "currency_code": "EUR"
+                }
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 7712334455011,
+            "src": "https://cdn.shopify.com/s/files/1/0442/bazin-bleu-roi.jpg",
+            "width": 1200,
+            "height": 1600,
+            "alt": "Bazin Riche Getzner Bleu Roi — pièce de 5 mètres",
+            "position": 1
+          }
+        ],
+        "options": [
+          {
+            "name": "Longueur",
+            "position": 1,
+            "values": [
+              "5 mètres",
+              "10 mètres"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7712334455002,
+        "title": "Bazin Riche Getzner Blanc Cassé — pièce de 5 mètres",
+        "handle": "bazin-riche-getzner-blanc-casse",
+        "body_html": "<p>Bazin riche Getzner blanc cassé, qualité Super Sego. Parfait pour la broderie main et les tenues de Tabaski.</p>",
+        "published_at": "2026-03-04T10:00:00+01:00",
+        "created_at": "2026-03-03T09:00:00+01:00",
+        "updated_at": "2026-03-04T10:00:00+01:00",
+        "vendor": "Mama Getzner",
+        "product_type": "Bazin riche",
+        "tags": [
+          "bazin riche",
+          "getzner",
+          "tissu",
+          "damassé"
+        ],
+        "variants": [
+          {
+            "id": 7712334455003,
+            "title": "5 mètres",
+            "option1": "5 mètres",
+            "price": "175.00",
+            "sku": "MG-7712334455002-5M",
+            "available": true,
+            "grams": 1400,
+            "presentment_prices": [
+              {
+                "price": {
+                  "amount": "175.00",
+                  "currency_code": "EUR"
+                }
+              }
+            ]
+          },
+          {
+            "id": 7712334455004,
+            "title": "10 mètres",
+            "option1": "10 mètres",
+            "price": "332.50",
+            "sku": "MG-7712334455002-10M",
+            "available": true,
+            "grams": 2800,
+            "presentment_prices": [
+              {
+                "price": {
+                  "amount": "332.50",
+                  "currency_code": "EUR"
+                }
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 7712334455012,
+            "src": "https://cdn.shopify.com/s/files/1/0442/bazin-blanc-casse.jpg",
+            "width": 1200,
+            "height": 1600,
+            "alt": "Bazin Riche Getzner Blanc Cassé — pièce de 5 mètres",
+            "position": 1
+          }
+        ],
+        "options": [
+          {
+            "name": "Longueur",
+            "position": 1,
+            "values": [
+              "5 mètres",
+              "10 mètres"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7712334455003,
+        "title": "Getzner Super Sego Vert Émeraude — pièce de 5 mètres",
+        "handle": "getzner-super-sego-vert-emeraude",
+        "body_html": "<p>Getzner Super Sego, le damassé le plus brillant de la maison autrichienne. Vert émeraude profond.</p>",
+        "published_at": "2026-05-21T10:00:00+02:00",
+        "created_at": "2026-05-20T09:00:00+02:00",
+        "updated_at": "2026-05-21T10:00:00+02:00",
+        "vendor": "Mama Getzner",
+        "product_type": "Bazin riche",
+        "tags": [
+          "bazin riche",
+          "getzner",
+          "tissu",
+          "damassé"
+        ],
+        "variants": [
+          {
+            "id": 7712334455004,
+            "title": "5 mètres",
+            "option1": "5 mètres",
+            "price": "219.00",
+            "sku": "MG-7712334455003-5M",
+            "available": true,
+            "grams": 1400,
+            "presentment_prices": [
+              {
+                "price": {
+                  "amount": "219.00",
+                  "currency_code": "EUR"
+                }
+              }
+            ]
+          },
+          {
+            "id": 7712334455005,
+            "title": "10 mètres",
+            "option1": "10 mètres",
+            "price": "416.10",
+            "sku": "MG-7712334455003-10M",
+            "available": true,
+            "grams": 2800,
+            "presentment_prices": [
+              {
+                "price": {
+                  "amount": "416.10",
+                  "currency_code": "EUR"
+                }
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 7712334455013,
+            "src": "https://cdn.shopify.com/s/files/1/0442/getzner-vert-emeraude.jpg",
+            "width": 1200,
+            "height": 1600,
+            "alt": "Getzner Super Sego Vert Émeraude — pièce de 5 mètres",
+            "position": 1
+          }
+        ],
+        "options": [
+          {
+            "name": "Longueur",
+            "position": 1,
+            "values": [
+              "5 mètres",
+              "10 mètres"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

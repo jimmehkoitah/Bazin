@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Atelier Khadija Couture",
+    "placeId": "ChIJSbLnDakarBazin0001",
+    "categoryName": "Tailor",
+    "categories": [
+      "Tailor",
+      "Fabric store"
+    ],
+    "address": "Rue 11 x Avenue Blaise Diagne, Dakar, Sénégal",
+    "street": "Rue 11 x Avenue Blaise Diagne",
+    "city": "Dakar",
+    "countryCode": "SN",
+    "phone": "+221 77 123 45 67",
+    "phoneUnformatted": "+221771234567",
+    "website": "https://atelierkhadija.sn/",
+    "totalScore": 4.7,
+    "reviewsCount": 128,
+    "location": {
+      "lat": 14.6752,
+      "lng": -17.4436
+    },
+    "url": "https://www.google.com/maps/search/?api=1&query=Atelier+Khadija+Couture",
+    "imageUrl": "https://lh5.googleusercontent.com/p/ChIJSbLnDakarBazin0001=w408-h306-k-no",
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 8 PM"
+      }
+    ]
+  },
+  {
+    "title": "Sandaga Tissus Bazin & Getzner",
+    "placeId": "ChIJSbLnDakarBazin0002",
+    "categoryName": "Fabric store",
+    "categories": [
+      "Fabric store",
+      "Fabric store"
+    ],
+    "address": "Marché Sandaga, Avenue Émile Badiane, Dakar, Sénégal",
+    "street": "Marché Sandaga, Avenue Émile Badiane",
+    "city": "Dakar",
+    "countryCode": "SN",
+    "phone": "+221 77 554 21 09",
+    "phoneUnformatted": "+221775542109",
+    "website": "https://sandagatissus.sn/",
+    "totalScore": 4.3,
+    "reviewsCount": 342,
+    "location": {
+      "lat": 14.6741,
+      "lng": -17.4392
+    },
+    "url": "https://www.google.com/maps/search/?api=1&query=Sandaga+Tissus+Bazin+&+Getzner",
+    "imageUrl": "https://lh5.googleusercontent.com/p/ChIJSbLnDakarBazin0002=w408-h306-k-no",
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 8 PM"
+      }
+    ]
+  },
+  {
+    "title": "Couture Ndeye Bazin Riche",
+    "placeId": "ChIJSbLnDakarBazin0003",
+    "categoryName": "Clothing alteration service",
+    "categories": [
+      "Clothing alteration service",
+      "Fabric store"
+    ],
+    "address": "Cité Keur Gorgui, Sacré-Cœur 3, Dakar, Sénégal",
+    "street": "Cité Keur Gorgui, Sacré-Cœur 3",
+    "city": "Dakar",
+    "countryCode": "SN",
+    "phone": "+221 78 330 77 41",
+    "phoneUnformatted": "+221783307741",
+    "website": "",
+    "totalScore": 4.9,
+    "reviewsCount": 56,
+    "location": {
+      "lat": 14.7063,
+      "lng": -17.461
+    },
+    "url": "https://www.google.com/maps/search/?api=1&query=Couture+Ndeye+Bazin+Riche",
+    "imageUrl": "https://lh5.googleusercontent.com/p/ChIJSbLnDakarBazin0003=w408-h306-k-no",
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 8 PM"
+      }
+    ]
+  }
+]

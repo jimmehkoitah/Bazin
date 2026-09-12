@@ -32,8 +32,9 @@ import html as html_mod
 import logging
 import re
 import time
-from datetime import datetime, timezone
-from typing import Any, Callable
+from collections.abc import Callable
+from datetime import UTC, datetime
+from typing import Any, ClassVar
 
 import httpx
 
@@ -216,19 +217,26 @@ def as_str(value: Any) -> str | None:
     return text or None
 
 
+def first_str(value: Any) -> str | None:
+    """A string field that some sources return as a list (facebook `websites`, maps `imageUrls`)."""
+    if isinstance(value, list):
+        value = next((v for v in value if isinstance(v, str) and v.strip()), None)
+    return as_str(value)
+
+
 def parse_dt(value: Any) -> datetime | None:
     """Parse ISO-8601 strings or epoch seconds/milliseconds into a timezone-aware datetime."""
     if value is None or value == "":
         return None
     if isinstance(value, datetime):
-        return value if value.tzinfo else value.replace(tzinfo=timezone.utc)
+        return value if value.tzinfo else value.replace(tzinfo=UTC)
     if isinstance(value, (int, float)) or (isinstance(value, str) and value.isdigit()):
         seconds = float(value)
         if seconds > 1e12:  # milliseconds
             seconds /= 1000.0
         if seconds <= 0:
             return None
-        return datetime.fromtimestamp(seconds, tz=timezone.utc)
+        return datetime.fromtimestamp(seconds, tz=UTC)
     text = str(value).strip().replace("Z", "+00:00")
     parsed: datetime | None = None
     try:
@@ -242,10 +250,10 @@ def parse_dt(value: Any) -> datetime | None:
             return None
     if parsed is None:
         return None
-    return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+    return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
 
 
-def engagement(**values: int | float | None) -> dict:
+def engagement(**values: float | None) -> dict:
     """Engagement dict with the unknown metrics dropped."""
     return {k: v for k, v in values.items() if v is not None}
 
@@ -288,7 +296,7 @@ def strip_html(raw: str | None, limit: int | None = None) -> str | None:
     """Visible text of an HTML fragment, collapsed to single spaces."""
     if not raw:
         return None
-    text = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", raw, flags=re.S | re.I)
+    text = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", raw, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"<[^>]+>", " ", text)
     text = html_mod.unescape(text)
     text = re.sub(r"\s+", " ", text).strip()
@@ -306,7 +314,7 @@ def format_money(amount: float | None, currency: str | None) -> str | None:
     if amount is None:
         return None
     token = CURRENCY_TOKENS.get((currency or "").upper(), (currency or "").upper())
-    number = f"{amount:.2f}".rstrip("0").rstrip(".") if amount % 1 else str(int(amount))
+    number = f"{amount:.2f}" if amount % 1 else str(int(amount))
     return f"{number} {token}".strip()
 
 
@@ -333,7 +341,7 @@ class HttpAdapter(SourceAdapter):
 
     def store_raw(self, slug: str, payload: Any) -> str | None:
         """Hand the full payload to the raw store and return the reference for observations."""
-        if payload in (None, [], {}):
+        if not payload:
             return None
         try:
             return self.raw.put(self.name, slug, payload)
@@ -350,7 +358,7 @@ class ApifyClient:
     """Minimal Apify REST client: start a run, wait for it, read its dataset."""
 
     BASE_URL = "https://api.apify.com/v2"
-    TERMINAL = {"SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT", "TIMED_OUT"}
+    TERMINAL: ClassVar[set[str]] = {"SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT", "TIMED_OUT"}
 
     def __init__(
         self,
@@ -817,7 +825,7 @@ class ApifyFacebookAdapter(ApifyAdapter):
                             "followers": as_int(pick(item, "followers")),
                             "phone": as_str(pick(item, "phone")),
                             "address": as_str(pick(item, "address")),
-                            "website": as_str(pick(item, "website", "websites")),
+                            "website": first_str(pick(item, "website", "websites")),
                             "categories": [str(c) for c in categories] or None,
                         }.items()
                         if v is not None
@@ -893,9 +901,7 @@ class ApifyFacebookAdapter(ApifyAdapter):
             ],
             sep=" · ",
         )
-        website = pick(page, "website", "websites")
-        if isinstance(website, list):
-            website = website[0] if website else None
+        website = first_str(pick(page, "website", "websites"))
         observations = [obs for obs in (self._observation(p, raw_ref) for p in posts[:max_posts]) if obs]
         return ProfileBundle(
             platform=self.platform,
@@ -938,10 +944,7 @@ def _place_latlon(item: dict) -> tuple[float | None, float | None]:
 
 
 def _first_image(item: dict) -> str | None:
-    image = pick(item, "imageUrl", "imageUrls", "thumbnailUrl")
-    if isinstance(image, list):
-        image = next((i for i in image if isinstance(i, str)), None)
-    return as_str(image)
+    return first_str(pick(item, "imageUrl", "imageUrls", "thumbnailUrl"))
 
 
 class ApifyGoogleMapsAdapter(ApifyAdapter):
