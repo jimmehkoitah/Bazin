@@ -120,6 +120,9 @@ def test_identity_merge_and_enrichment(pipeline_db, conn):
     assert handles == {"dakarcouture", "dakar.couture"}  # merged on the shared WhatsApp number
     contacts = fetch_all(conn, "select kind, normalized_value from contact_channels where business_id = %s", (dakar["id"],))
     assert any(c["kind"] == "whatsapp" and c["normalized_value"] == "+221771234567" for c in contacts)
+    assert len([c for c in contacts if c["kind"] == "whatsapp"]) == 1  # dates in captions must not become phone numbers
+    assert not any(c["kind"] == "website" for c in contacts)
+    assert dakar["last_observed_active_at"] is not None
     ships = {r["country"] for r in fetch_all(conn, "select country from locations where business_id = %s and kind = 'ships_to'", (dakar["id"],))}
     assert {"FR", "US"} <= ships
     prices = fetch_all(conn, "select currency, amount_min, usd_equivalent from prices where business_id = %s", (dakar["id"],))

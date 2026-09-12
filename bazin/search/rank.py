@@ -49,7 +49,7 @@ def load_candidates(conn) -> list[dict[str, Any]]:
         conn,
         """
         select b.id, b.canonical_name, b.business_type, b.primary_country, b.description, b.quality_score, b.text_embedding,
-               b.last_observed_active_at,
+               greatest(b.last_observed_active_at, (select max(o.published_at) from observations o where o.business_id = b.id)) as last_observed_active_at,
                coalesce((select array_agg(concept_id) from business_concepts bc where bc.business_id = b.id), '{}') as concepts,
                coalesce((select jsonb_agg(jsonb_build_object('kind', kind, 'country', country, 'city', city, 'lat', lat, 'lon', lon)) from locations l where l.business_id = b.id), '[]') as locations,
                coalesce((select jsonb_agg(jsonb_build_object('kind', kind, 'value', value)) from contact_channels c where c.business_id = b.id and not c.do_not_contact), '[]') as contacts,
@@ -70,6 +70,18 @@ def load_candidates(conn) -> list[dict[str, Any]]:
         where b.status in ('active','dormant') and b.objection_at is null and b.duplicate_of is null
         """,
     )
+
+
+def _concept_labels(concept_ids: list[str], tax, limit: int = 12) -> list[str]:
+    """Human labels for the card, most specific first, without signal or colour concepts."""
+    out: list[str] = []
+    for cid in sorted(concept_ids, key=lambda c: -c.count(".")):
+        if cid.startswith(("signal.", "color.")) or cid not in tax.concepts:
+            continue
+        label = tax.concepts[cid].canonical_label
+        if label not in out:
+            out.append(label)
+    return out[:limit]
 
 
 def concept_overlap(parsed: ParsedQuery, concepts: list[str]) -> float:
@@ -189,7 +201,7 @@ def search(conn, parsed: ParsedQuery, opts: SearchOptions, query_vec: list[float
             "score": round(float(r["quality_score"] or 0.0), 3),
             "rank": round(rank, 3),
             "cluster": {"id": str(cl["id"]), "label": cl["label"], "hue": cl["hue"], "css": hue_to_css(cl["hue"])} if cl else None,
-            "concepts": [c for c in r["concepts"] if not c.startswith("signal.")][:12],
+            "concepts": _concept_labels(r["concepts"], tax),
             "colors": [c for c in (r["colors"] or []) if c],
             "price_from_usd": float(r["price_from_usd"]) if r["price_from_usd"] is not None else None,
             "ships_to": sorted({l["country"] for l in (r["locations"] or []) if l.get("kind") == "ships_to" and l.get("country")}),

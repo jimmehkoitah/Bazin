@@ -296,8 +296,11 @@ def countries_in(text: str) -> list[str]:
 
 
 def field_value(text: str, name: str) -> str:
-    m = re.search(rf"^{re.escape(name)}:\s*(.*)$", text, re.M)
-    return m.group(1).strip() if m else ""
+    """First non-empty 'Name: value' line. `[ \\t]*` rather than `\\s*` so an empty value never swallows the next line."""
+    for m in re.finditer(rf"^{re.escape(name)}:[ \t]*(.*)$", text, re.M):
+        if m.group(1).strip():
+            return m.group(1).strip()
+    return ""
 
 
 class HeuristicLLM(LLM):

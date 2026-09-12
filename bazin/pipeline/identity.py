@@ -39,6 +39,10 @@ def extract_phones(text: str | None, default_region: str | None = None) -> list[
     found: list[str] = []
     for m in WA_RE.finditer(text):
         found.append("+" + m.group(1))
+    # Dates and years are not phone numbers ("[2026-08-01]" parses as a valid Malian number otherwise).
+    text = re.sub(r"\b\d{4}-\d{2}-\d{2}(?:[T ]\d{2}:\d{2}(?::\d{2})?)?\b", " ", text)
+    text = re.sub(r"\b\d{1,2}[/.]\d{1,2}[/.]\d{2,4}\b", " ", text)
+    text = re.sub(r"\b(?:19|20)\d{2}\b", " ", text)
     regions = [default_region] if default_region else []
     regions += ["SN", "ML", "NG", "FR", "US", "GB", "IT", "CI", "BJ", "GN", "GM", "TG"]
     for m in PHONE_RE.finditer(text):
@@ -74,7 +78,7 @@ def website_host(url: str | None) -> str | None:
     host = (urlparse(url).hostname or "").lower()
     host = host.removeprefix("www.")
     # Link-in-bio aggregators and social hosts are not identifying websites.
-    if not host or any(h in host for h in ("linktr.ee", "instagram.com", "tiktok.com", "facebook.com", "wa.me", "whatsapp.com", "youtube.com", "snapchat.com", "beacons.ai", "bio.site", "linkin.bio")):
+    if not host or "." not in host or any(h in host for h in ("linktr.ee", "instagram.com", "tiktok.com", "facebook.com", "wa.me", "whatsapp.com", "youtube.com", "snapchat.com", "beacons.ai", "bio.site", "linkin.bio")):
         return None
     return host
 
@@ -210,6 +214,11 @@ def ensure_business(conn, ident: IdentityFacts) -> str:
     bid = str(row["id"])
     execute(conn, "update identities set business_id = %s, is_primary = true where id = %s", (bid, ident.id))
     execute(conn, "update observations set business_id = %s where identity_id = %s and business_id is null", (bid, ident.id))
+    execute(
+        conn,
+        "update businesses set last_observed_active_at = (select max(published_at) from observations where business_id = %s) where id = %s",
+        (bid, bid),
+    )
     return bid
 
 

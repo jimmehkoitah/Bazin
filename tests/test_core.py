@@ -60,8 +60,14 @@ def test_prices_parse_common_forms():
 def test_phone_extraction_and_hosts():
     assert extract_phones("WhatsApp +221 77 123 45 67 ou wa.me/33774139802") == ["+33774139802", "+221771234567"] or set(extract_phones("WhatsApp +221 77 123 45 67 ou wa.me/33774139802")) == {"+33774139802", "+221771234567"}
     assert extract_phones("Appelez le 77 123 45 67", "SN") == ["+221771234567"]
+    assert extract_phones("- [2026-08-01] Grand boubou 150 000 FCFA\n- [2026-07-20] taille basse 75 000 F, tabaski 2026", "ML") == []
     assert website_host("https://linktr.ee/x") is None
     assert website_host("www.mamagetzner.com/pages/shops") == "mamagetzner.com"
+    assert website_host("Followers: 30000") is None
+    from bazin.llm.client import field_value
+
+    assert field_value("Handle: a\nLink: \nFollowers: 30000\nLink: https://x.com/", "Link") == "https://x.com/"
+    assert field_value("Link: \nFollowers: 30000", "Link") == ""
 
 
 def test_identity_rules():
