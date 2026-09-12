@@ -242,7 +242,53 @@ Pending: this section is filled from the platform-access and legal research thre
 
 ## 8. Monetization
 
-Pending: this section is filled from the monetization research thread.
+### 8.1 Comparables (2025–2026, snippet-based)
+
+| Company | Model | Vendor price | Terms and known problems | Confidence |
+|---|---|---|---|---|
+| WeddingWire / The Knot | Subscription storefront plus featured placement, sold by quote | About $125–150/month entry, past $1,000/month in competitive markets; featured placement $5,000–15,000/year | 12-month contracts; recurring vendor complaints about fake leads and undisclosed lock-in (2025) | Medium |
+| Thumbtack | Pay per lead, credits, self-serve | $8 to $150+ per lead by trade | No contract; budget caps; lead-quality disputes common | Medium |
+| Google Local Services Ads | Pay per lead with Google Guarantee badge | Average about $53 per lead (Feb 2026 benchmark, 888 contractors) | Works where average tickets are large (about $1,800 in that benchmark) | Medium-high |
+| Yelp for Business | CPC ads plus upgrade packages | From $5/day; typical SMB $150–1,000+/month; upgrade package from $270/month | Cancel anytime | Medium-high |
+| Fresha | Subscription plus commission on new clients | $19.95/month; 20% commission on each new client once; 2.19–3.30% processing | Commission does not apply to repeat or direct bookings | Medium |
+| Etsy | Listing, transaction and payment fees | $0.20 listing; 6.5% transaction; 3% + $0.25 processing; Offsite Ads 12–15% | Effective take 11–22% | High |
+| Afrikrea / ANKA | SaaS subscription plus tiered commission | €10/month; 5–8% commission under 20 sales or €2,000/month, 10–15% above; lower if the seller brings own traffic | Official help centre, undated; 2026 re-confirmation not found | Medium-high |
+| LoveWeddingsNG | Featured vendor tier, sponsored posts, banners | Quote only | — | Low on price |
+| BellaNaija Weddings | Sponsored posts and banners | One stale rate card (about 2017) at ₦105,000 per post | — | Low |
+| GEO/AEO agencies (reference only) | Monthly retainer | SMB tier $1,500–5,000/month; DIY tools $10–1,000/month | Intent far exceeds execution: only low single digits of businesses have a resourced programme (Conductor 2026) | Medium |
+
+Willingness-to-pay signals: Nigerian SMBs report spending ₦30,000 to 250,000 per month (about $19 to $160) on Instagram and Facebook boosting (2026, single agency source, medium confidence). A Senegalese agency claims WhatsApp Catalog replaces a website for 70% of SMBs (single claim, low confidence). The most relevant GSMA MSME e-commerce survey covering Nigeria and Senegal dates from October 2023, not 2025–2026. Wave held more than half of Senegal's mobile-money share in 2023; any paid tier for Dakar or Bamako vendors must bill through Wave or Orange Money, which is a build cost, not a pricing detail.
+
+### 8.2 What feeds AI answer engines today
+
+- Google AI Mode and AI Overviews draw local recommendations from Google Business Profile, schema.org structured data and third-party reviews.
+- ChatGPT shopping recommendations are increasingly feed-driven: one tracking study (Profound) reports feed-integrated picks rising from about 8% to about 65% of tracked recommendations by early September 2026.
+- Perplexity leans on directories, press and Wikipedia.
+- Consumer use of AI for local discovery is reported to have jumped from 6% to 45% in a year (BrightLocal 2026; report not directly accessible, medium confidence).
+- Implication for the AEO thesis: a niche directory can influence AI answers only by being the structured, authoritative source those systems already read: consistent Business Profile data, schema.org on every vendor page, a merchant-style feed, and press or Wikipedia-grade citations. Selling "AI visibility" as a product to a Dakar tailor is not credible; bundling schema and profile hygiene into the paid tier is.
+
+### 8.3 Brand-side B2B angle
+
+- Vlisco Group (Vlisco, Woodin, Uniwax, GTP; owned by Actis) has spent for decades on anti-counterfeiting: a QR and holospot verification tool, customs training, seizures, after a documented revenue decline attributed to Chinese copies. This proves the problem is worth money to a brand.
+- Getzner has no comparable public programme (section 2.4), which is the opening. No precedent was found of any brand licensing dealer-verification data from a third-party discovery platform, so treat the brand contract as a hypothesis to test in one conversation, not a revenue line.
+
+### 8.4 A realistic model at 1,000 to 5,000 vendors
+
+Illustrative, every figure an assumption:
+
+- 3,000 claimed vendors by year two, roughly 40% in diaspora hubs and 60% in West Africa.
+- Free claim tier for density; 8 to 12% upgrade to a paid verified badge and structured catalogue. This conversion rate is the single most load-bearing and least verified assumption in the model.
+- Prices by market: $25 to $40 per month in diaspora hubs (below WeddingWire, near a Yelp-lite tier, because these are one-to-few-person ateliers); $5 to $10 per month in Dakar, Bamako and Lagos, which is a fraction of the boosting spend already reported.
+- Result: core subscription revenue around $60,000 to $65,000 per year at year two; a small capped lead-fee layer adds perhaps $18,000; sponsored placement is immaterial until organic search volume exists (year three or later).
+- One brand data or verified-dealer contract at $15,000 to $40,000 per year would rival the entire subscription base.
+
+Read plainly: at this vendor count it is a real but small business unless paid conversion, brand contracts, or vendor count grow well beyond the stated range. The expansion into Ankara, Aso Oke, Kente and other categories is where scale comes from, which is why the beachhead must prove the mechanics rather than the revenue.
+
+### 8.5 Strongest and weakest paths
+
+- Strongest: a low-priced verified badge and structured-catalogue subscription, tiered by market, with schema and profile hygiene bundled in. Direct precedent in Fresha and Afrikrea; substitutes existing boosting spend; maps onto the one pain every comparable shows, which is trust.
+- Weakest: pay-per-lead or commission as the primary model in West African markets. Lead-quality disputes are the dominant failure mode of that structure even in the US; cash and mobile-money handoffs make attribution unreliable; a lead price high enough to sustain the platform is unaffordable for everyday orders, and one affordable for a Dakar tailor does not cover servicing.
+- Speculative: selling AEO directly to vendors. The defensible versions are the bundled hygiene feature above and, separately, licensing the aggregate taxonomy and verified-dealer data to brands or marketplaces.
 
 ## 9. Revised MVP plan with gates
 
