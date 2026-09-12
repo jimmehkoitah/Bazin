@@ -229,7 +229,7 @@ def search(conn, parsed: ParsedQuery, opts: SearchOptions, query_vec: list[float
             "price_from_usd": float(r["price_from_usd"]) if r["price_from_usd"] is not None else None,
             "ships_to": sorted({l["country"] for l in (r["locations"] or []) if l.get("kind") == "ships_to" and l.get("country")}),
             "contact": [{"kind": c["kind"], "value": c["value"], "href": CONTACT_HREF.get(c["kind"], lambda v: None)(c["value"])} for c in (r["contacts"] or [])],
-            "identities": r["identities"] or [],
+            "identities": [{**i, "handle": ((i.get("handle") or "").lstrip("@") or None)} for i in (r["identities"] or [])],
             "evidence_count": int(r["evidence_count"] or 0),
             "last_active": r["last_observed_active_at"].date().isoformat() if r["last_observed_active_at"] else None,
             "reasons": r["reasons"] or [],
